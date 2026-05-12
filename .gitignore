@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (داده خام نباید روی گیت‌هاب آپلود شود — ملاحظات اخلاقی و حجم)
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/*.csv
+data/processed/*.parquet
+
+# Logs & models
+experiments/logs/
+experiments/results/*.pkl
+*.pth
+*.ckpt
+mlruns/
+mlflow.db
+
+# Figures (اختیاری — اگر می‌خواهید کنترل نسخه شوند، این خط را پاک کنید)
+# figures/*.png
+
+# Notebooks output (اختیاری)
+# notebooks/*.ipynb
