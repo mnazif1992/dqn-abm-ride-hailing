@@ -1,0 +1,105 @@
+{
+  "n_zones": 14,
+  "random_seed": 42,
+  "kmeans_inertia": 20.560484834309992,
+  "zones": [
+    {
+      "zone_id": 0,
+      "center_lat": 35.80558809628755,
+      "center_lon": 51.43181261275089,
+      "n_trips": 7626,
+      "demand_share": 0.0728
+    },
+    {
+      "zone_id": 1,
+      "center_lat": 35.75348920094539,
+      "center_lon": 51.40125741667505,
+      "n_trips": 9882,
+      "demand_share": 0.0943
+    },
+    {
+      "zone_id": 2,
+      "center_lat": 35.716434327601675,
+      "center_lon": 51.49813117165072,
+      "n_trips": 6679,
+      "demand_share": 0.0637
+    },
+    {
+      "zone_id": 3,
+      "center_lat": 35.693410051390806,
+      "center_lon": 51.350573514993094,
+      "n_trips": 10149,
+      "demand_share": 0.0969
+    },
+    {
+      "zone_id": 4,
+      "center_lat": 35.59705644041149,
+      "center_lon": 51.43214606444099,
+      "n_trips": 5152,
+      "demand_share": 0.0492
+    },
+    {
+      "zone_id": 5,
+      "center_lat": 35.69164469644103,
+      "center_lon": 51.31522348597348,
+      "n_trips": 7143,
+      "demand_share": 0.0682
+    },
+    {
+      "zone_id": 6,
+      "center_lat": 35.69721352073002,
+      "center_lon": 51.39618790121008,
+      "n_trips": 10124,
+      "demand_share": 0.0966
+    },
+    {
+      "zone_id": 7,
+      "center_lat": 35.76420833302431,
+      "center_lon": 51.419742008961684,
+      "n_trips": 9726,
+      "demand_share": 0.0928
+    },
+    {
+      "zone_id": 8,
+      "center_lat": 35.728572940632226,
+      "center_lon": 51.47497342148548,
+      "n_trips": 7787,
+      "demand_share": 0.07429999999999999
+    },
+    {
+      "zone_id": 9,
+      "center_lat": 35.71847985303973,
+      "center_lon": 51.388061189404816,
+      "n_trips": 6278,
+      "demand_share": 0.0599
+    },
+    {
+      "zone_id": 10,
+      "center_lat": 35.66576575423729,
+      "center_lon": 51.38390775691347,
+      "n_trips": 4494,
+      "demand_share": 0.0429
+    },
+    {
+      "zone_id": 11,
+      "center_lat": 35.71442321163614,
+      "center_lon": 51.32020584346621,
+      "n_trips": 6510,
+      "demand_share": 0.0621
+    },
+    {
+      "zone_id": 12,
+      "center_lat": 35.72336516354446,
+      "center_lon": 51.41328491257806,
+      "n_trips": 6701,
+      "demand_share": 0.064
+    },
+    {
+      "zone_id": 13,
+      "center_lat": 35.73602404328473,
+      "center_lon": 51.515825261089795,
+      "n_trips": 6519,
+      "demand_share": 0.0622
+    }
+  ]
+}
