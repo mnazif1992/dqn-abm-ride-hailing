@@ -41,6 +41,46 @@ DEFAULT_SEEDS: List[int] = [42, 123, 456, 789, 1010, 1337, 2024, 3141, 5926, 777
 
 
 # ============================================================================
+# Helper: wrapper برای DispatcherAgent.dispatch_step که no_driver را فعال می‌کند
+# ============================================================================
+
+def _make_no_driver_dispatch(threshold: int, original_dispatch):
+    """
+    Wrapper بر DispatcherAgent.dispatch_step که مسافرانی را که چند گام پیاپی
+    هیچ راننده‌ای در شعاع‌شان نیست، به‌عنوان no_driver علامت می‌زند.
+
+    دلیل وجود: در نسخه‌ی فعلی ABM، متد mark_no_driver() تعریف شده اما هرگز
+    صدا زده نمی‌شود؛ بنابراین no_driver_rate همیشه ≈ 0 می‌ماند و POM شکست
+    می‌خورد. این patch بدون تغییر در src/abm/ این رفتار را اصلاح می‌کند.
+    """
+    def patched_dispatch_step(
+        self, drivers, passengers, hour, weather,
+        surge_multiplier, zone_attractiveness, base_speed_kmh,
+    ):
+        from src.abm.passenger_agent import PassengerStatus
+        # pre-pass: مسافرانی که این گام هیچ راننده در شعاع‌شان نیست را پیدا کن
+        cand = self.build_candidates(drivers, passengers)
+        pax_with_candidate = {c.passenger.unique_id for c in cand}
+        for p in passengers:
+            if p.status != PassengerStatus.WAITING:
+                continue
+            if p.unique_id in pax_with_candidate:
+                p._steps_without_candidate = 0
+            else:
+                cnt = getattr(p, "_steps_without_candidate", 0) + 1
+                p._steps_without_candidate = cnt
+                if cnt >= threshold:
+                    p.mark_no_driver()
+        # original را صدا بزن — build_candidates مجدداً اجرا می‌شود ولی
+        # مسافران NO_DRIVER دیگر در WAITING نیستند → خودکار حذف می‌شوند
+        return original_dispatch(
+            self, drivers, passengers, hour, weather,
+            surge_multiplier, zone_attractiveness, base_speed_kmh,
+        )
+    return patched_dispatch_step
+
+
+# ============================================================================
 # Context manager برای override پارامترهای رفتاری ABM
 # ============================================================================
 
@@ -51,6 +91,7 @@ def abm_param_overrides(
     patience_gamma_scale: Optional[float] = None,
     acceptance_beta_a: Optional[float] = None,
     acceptance_beta_b: Optional[float] = None,
+    no_driver_threshold_steps: Optional[int] = None,
 ) -> Iterator[None]:
     """
     Context manager برای override پارامترهای hard-code شده در src/abm/.
@@ -64,6 +105,9 @@ def abm_param_overrides(
         patience_gamma_scale: مقیاس Gamma (پیش‌فرض: 8.087)
         acceptance_beta_a: پارامتر a در Beta برای acceptance_rate (پیش‌فرض: 8)
         acceptance_beta_b: پارامتر b در Beta (پیش‌فرض: 2)
+        no_driver_threshold_steps: اگر مقدار صحیح بدهیم، DispatcherAgent.dispatch_step
+            patch می‌شود تا مسافرانی که این تعداد گام پیاپی هیچ راننده در شعاع‌شان
+            نیست، به‌عنوان no_driver علامت‌گذاری شوند (پیش‌فرض None = غیرفعال).
 
     مثال:
         with abm_param_overrides(p_cancel_per_step=0.5):
@@ -71,7 +115,7 @@ def abm_param_overrides(
             # اجرا با p_cancel=0.5
         # خارج از بلوک، p_cancel به 0.7 بازگشته
     """
-    from src.abm import passenger_agent, driver_agent
+    from src.abm import passenger_agent, driver_agent, dispatcher_agent
 
     # ---- ذخیره حالت اصلی ----
     saved: Dict[str, Any] = {}
@@ -84,6 +128,9 @@ def abm_param_overrides(
 
     # 3) sample_acceptance_rate (تابع کامل را جایگزین می‌کنیم چون پارامترها hard-code‌اند)
     saved["sample_acceptance_rate"] = driver_agent.sample_acceptance_rate
+
+    # 4) DispatcherAgent.dispatch_step (برای فعال‌سازی no_driver_threshold)
+    saved["dispatch_step"] = dispatcher_agent.DispatcherAgent.dispatch_step
 
     # ---- اعمال override ها ----
 
@@ -132,6 +179,12 @@ def abm_param_overrides(
         except ImportError:
             pass
 
+    # 4) no_driver_threshold: patch DispatcherAgent.dispatch_step
+    if no_driver_threshold_steps is not None:
+        dispatcher_agent.DispatcherAgent.dispatch_step = _make_no_driver_dispatch(
+            int(no_driver_threshold_steps), saved["dispatch_step"],
+        )
+
     try:
         yield
     finally:
@@ -139,6 +192,7 @@ def abm_param_overrides(
         passenger_agent.PassengerAgent.P_CANCEL_PER_STEP = saved["P_CANCEL_PER_STEP"]
         passenger_agent.sample_passenger_max_wait = saved["sample_passenger_max_wait"]
         driver_agent.sample_acceptance_rate = saved["sample_acceptance_rate"]
+        dispatcher_agent.DispatcherAgent.dispatch_step = saved["dispatch_step"]
         # و در namespace model.py
         try:
             from src.abm import model as _model_mod
@@ -213,6 +267,7 @@ def run_abm_once(
     for key in (
         "p_cancel_per_step", "patience_gamma_a", "patience_gamma_scale",
         "acceptance_beta_a", "acceptance_beta_b",
+        "no_driver_threshold_steps",
     ):
         if key in overrides:
             patch_kwargs[key] = overrides.pop(key)
