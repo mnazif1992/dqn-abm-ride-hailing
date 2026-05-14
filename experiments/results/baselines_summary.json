@@ -1,0 +1,174 @@
+{
+  "random": {
+    "mean": {
+      "CR": 0.6149864994828242,
+      "cancel_rate": 0.26884576638916713,
+      "no_driver_rate": 0.11240346563335539,
+      "mean_WT_min": 3.8173359031429626,
+      "mean_DU": 0.44025500846108867,
+      "acceptance_rate": 0.25038054778493773,
+      "total_requests": 3613.4,
+      "total_completed": 2221.5,
+      "total_cancelled": 971.8,
+      "n_no_driver": 406.5,
+      "total_assignments": 2235.1,
+      "total_rejections": 6697.3
+    },
+    "std": {
+      "CR": 0.019718769498833534,
+      "cancel_rate": 0.009778455388707644,
+      "no_driver_rate": 0.01420589874088756,
+      "mean_WT_min": 0.09811275178274642,
+      "mean_DU": 0.009775396222260006,
+      "acceptance_rate": 0.00672566031013829,
+      "total_requests": 75.0558310711285,
+      "total_completed": 61.4279162017473,
+      "total_cancelled": 49.32387296679413,
+      "n_no_driver": 55.193095381376985,
+      "total_assignments": 60.39766367814054,
+      "total_rejections": 296.7655453196831
+    },
+    "n_seeds": 10,
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1010,
+      1337,
+      2024,
+      3141,
+      5926,
+      7777
+    ]
+  },
+  "greedy": {
+    "mean": {
+      "CR": 0.608930431751393,
+      "cancel_rate": 0.26776165924423073,
+      "no_driver_rate": 0.11983594107130002,
+      "mean_WT_min": 3.63495564396692,
+      "mean_DU": 0.43842902098339165,
+      "acceptance_rate": 0.2553446787436196,
+      "total_requests": 3638.5,
+      "total_completed": 2215.3,
+      "total_cancelled": 974.5,
+      "n_no_driver": 436.1,
+      "total_assignments": 2227.9,
+      "total_rejections": 6499.9
+    },
+    "std": {
+      "CR": 0.015333983432233413,
+      "cancel_rate": 0.013330242243716239,
+      "no_driver_rate": 0.005568490452574923,
+      "mean_WT_min": 0.1499026379364001,
+      "mean_DU": 0.012148929405401458,
+      "acceptance_rate": 0.00796697588841375,
+      "total_requests": 58.60839909470693,
+      "total_completed": 54.18907228912076,
+      "total_cancelled": 55.871380071653064,
+      "n_no_driver": 23.259167846010506,
+      "total_assignments": 56.21871969766338,
+      "total_rejections": 173.09435448782133
+    },
+    "n_seeds": 10,
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1010,
+      1337,
+      2024,
+      3141,
+      5926,
+      7777
+    ]
+  },
+  "hungarian": {
+    "mean": {
+      "CR": 0.44912359311785954,
+      "cancel_rate": 0.45623844181277856,
+      "no_driver_rate": 0.09227398120979811,
+      "mean_WT_min": 4.978916797113162,
+      "mean_DU": 0.3121211678024679,
+      "acceptance_rate": 0.2714306550782572,
+      "total_requests": 3598.9,
+      "total_completed": 1616.0,
+      "total_cancelled": 1642.5,
+      "n_no_driver": 331.9,
+      "total_assignments": 1624.5,
+      "total_rejections": 4366.3
+    },
+    "std": {
+      "CR": 0.010633850490885834,
+      "cancel_rate": 0.012149204852790347,
+      "no_driver_rate": 0.010243235742335937,
+      "mean_WT_min": 0.09538592241169083,
+      "mean_DU": 0.01253050701148859,
+      "acceptance_rate": 0.009155419216264818,
+      "total_requests": 79.56052901896628,
+      "total_completed": 38.62641583165593,
+      "total_cancelled": 72.08212908435303,
+      "n_no_driver": 36.12462994812388,
+      "total_assignments": 36.20389788713671,
+      "total_rejections": 219.01093326336218
+    },
+    "n_seeds": 10,
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1010,
+      1337,
+      2024,
+      3141,
+      5926,
+      7777
+    ]
+  },
+  "hungarian_resolve": {
+    "mean": {
+      "CR": 0.6238159191872285,
+      "cancel_rate": 0.26017471425391264,
+      "no_driver_rate": 0.11233421306282065,
+      "mean_WT_min": 3.560655204287901,
+      "mean_DU": 0.43342272064829845,
+      "acceptance_rate": 0.2580511591418754,
+      "total_requests": 3589.2,
+      "total_completed": 2238.1,
+      "total_cancelled": 934.3,
+      "n_no_driver": 403.6,
+      "total_assignments": 2251.3,
+      "total_rejections": 6478.1
+    },
+    "std": {
+      "CR": 0.019584322214011126,
+      "cancel_rate": 0.013275667755406116,
+      "no_driver_rate": 0.011434393856393872,
+      "mean_WT_min": 0.15088960230042708,
+      "mean_DU": 0.016015351282262173,
+      "acceptance_rate": 0.008240958534864498,
+      "total_requests": 67.192592184291,
+      "total_completed": 46.91232958047028,
+      "total_cancelled": 59.61739119865388,
+      "n_no_driver": 45.40239837032596,
+      "total_assignments": 45.154180315891026,
+      "total_rejections": 231.59516882314756
+    },
+    "n_seeds": 10,
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1010,
+      1337,
+      2024,
+      3141,
+      5926,
+      7777
+    ]
+  }
+}
