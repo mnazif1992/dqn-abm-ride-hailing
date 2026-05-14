@@ -1,0 +1,115 @@
+{
+  "default": {
+    "mean": {
+      "CR": 0.9775717363380828,
+      "cancel_rate": 0.01958467920475675,
+      "no_driver_rate": 0.0,
+      "mean_WT_min": 2.1482652039612975,
+      "mean_DU": 0.2566701829598885,
+      "acceptance_rate": 0.218475665672598,
+      "total_requests": 3626.0,
+      "total_completed": 3544.3333333333335,
+      "total_cancelled": 71.33333333333333,
+      "n_no_driver": 0.0,
+      "total_assignments": 3554.6666666666665,
+      "total_rejections": 12756.333333333334
+    },
+    "std": {
+      "CR": 0.010592414710643967,
+      "cancel_rate": 0.010882164385997348,
+      "no_driver_rate": 0.0,
+      "mean_WT_min": 0.28190200186311565,
+      "mean_DU": 0.013339611176359505,
+      "acceptance_rate": 0.014861057779118843,
+      "total_requests": 92.50405396521819,
+      "total_completed": 77.6809715009624,
+      "total_cancelled": 40.91861841916627,
+      "n_no_driver": 0.0,
+      "total_assignments": 79.93956050250297,
+      "total_rejections": 977.6984879467357
+    },
+    "validation": {
+      "pom_per_pattern": {
+        "CR": false,
+        "WT": false,
+        "DU": false,
+        "cancel_rate": false,
+        "no_driver_rate": false
+      },
+      "pom_pass": false,
+      "n_patterns_passed": 0,
+      "n_patterns_total": 5,
+      "mape_per_kpi": {
+        "CR": 58.86242002782791,
+        "WT": 14.59417053133166,
+        "DU": 59.67067972915711,
+        "cancel_rate": 92.46460947380696,
+        "no_driver_rate": 100.0
+      },
+      "mape_weighted": 63.44642564558695,
+      "mape_threshold": 15.0,
+      "pass_threshold": false
+    }
+  },
+  "calibrated": {
+    "mean": {
+      "CR": 0.608930431751393,
+      "cancel_rate": 0.26776165924423073,
+      "no_driver_rate": 0.11983594107130002,
+      "mean_WT_min": 3.63495564396692,
+      "mean_DU": 0.43842902098339165,
+      "acceptance_rate": 0.2553446787436196,
+      "total_requests": 3638.5,
+      "total_completed": 2215.3,
+      "total_cancelled": 974.5,
+      "n_no_driver": 436.1,
+      "total_assignments": 2227.9,
+      "total_rejections": 6499.9
+    },
+    "std": {
+      "CR": 0.015333983432233413,
+      "cancel_rate": 0.013330242243716239,
+      "no_driver_rate": 0.005568490452574923,
+      "mean_WT_min": 0.1499026379364001,
+      "mean_DU": 0.012148929405401458,
+      "acceptance_rate": 0.00796697588841375,
+      "total_requests": 58.60839909470693,
+      "total_completed": 54.18907228912076,
+      "total_cancelled": 55.871380071653064,
+      "n_no_driver": 23.259167846010506,
+      "total_assignments": 56.21871969766338,
+      "total_rejections": 173.09435448782133
+    },
+    "validation": {
+      "pom_per_pattern": {
+        "CR": true,
+        "WT": false,
+        "DU": false,
+        "cancel_rate": true,
+        "no_driver_rate": true
+      },
+      "pom_pass": false,
+      "n_patterns_passed": 3,
+      "n_patterns_total": 5,
+      "mape_per_kpi": {
+        "CR": 1.0444365147222072,
+        "WT": 44.51027800588311,
+        "DU": 31.111809718721762,
+        "cancel_rate": 3.023830477480912,
+        "no_driver_rate": 3.931352467364731
+      },
+      "mape_weighted": 16.5397076310881,
+      "mape_threshold": 15.0,
+      "pass_threshold": false
+    },
+    "best_overrides": {
+      "no_driver_threshold_steps": 2,
+      "search_radius_km": 1.5,
+      "n_drivers": 275,
+      "p_cancel_per_step": 0.5,
+      "patience_scale": 6.0,
+      "acceptance_beta_a": 7.0,
+      "acceptance_beta_b": 1.5
+    }
+  }
+}
