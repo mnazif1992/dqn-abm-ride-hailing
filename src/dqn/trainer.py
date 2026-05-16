@@ -196,6 +196,7 @@ class DQNTrainer:
             "avg_q": ep_q_sum / ep_q_count if ep_q_count else 0.0,
             "epsilon": self._epsilon(),
             "n_transitions": n_transitions,
+            "n_completion_bonus": int(info.get("n_completion_bonus", 0)),
             "global_abm_step": self.global_abm_step,
             "buffer_size": len(self.buffer),
         }
@@ -292,9 +293,10 @@ class DQNTrainer:
                         stopped_early = True
             else:
                 logger.info(
-                    "ep=%d reward=%.3f loss=%.4f q=%.3f eps=%.3f",
+                    "ep=%d reward=%.3f loss=%.4f q=%.3f eps=%.3f cbonus=%d",
                     episode, ep_stats["ep_reward"], ep_stats["avg_loss"],
                     ep_stats["avg_q"], ep_stats["epsilon"],
+                    ep_stats["n_completion_bonus"],
                 )
 
             self._log_row(row)

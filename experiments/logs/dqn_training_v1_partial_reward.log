@@ -1,0 +1,1269 @@
+[11:07:23] [INFO] src.abm.utils: loaded config from /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/configs/abm_calibrated.yaml
+[11:07:23] [INFO] src.abm.utils: loaded targets from /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/data/calibration/targets.json (n_records=104770)
+[11:07:23] [INFO] src.abm.utils: loaded 14 zones from /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/data/calibration/zones.json
+[11:07:24] [INFO] __main__: Device: mps | n_episodes: 1000 | double_dqn: False
+[11:07:24] [INFO] src.dqn.trainer: Starting DQN training: n_episodes=1000, double_dqn=False, device=mps
+[11:07:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:07:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=1
+[11:07:36] [INFO] src.dqn.trainer: ep=1 reward=-1383.479 loss=0.0183 q=-0.803 eps=0.997
+[11:07:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:07:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=2
+[11:08:16] [INFO] src.dqn.trainer: ep=2 reward=-1439.901 loss=0.0113 q=-1.059 eps=0.993
+[11:08:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:08:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=3
+[11:08:54] [INFO] src.dqn.trainer: ep=3 reward=-1383.917 loss=0.0086 q=-1.055 eps=0.990
+[11:08:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 114)
+[11:08:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=4
+[11:09:34] [INFO] src.dqn.trainer: ep=4 reward=-1435.444 loss=0.0081 q=-1.125 eps=0.986
+[11:09:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:09:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=5
+[11:10:13] [INFO] src.dqn.trainer: ep=5 reward=-1360.764 loss=0.0072 q=-1.223 eps=0.983
+[11:10:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:10:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=6
+[11:10:55] [INFO] src.dqn.trainer: ep=6 reward=-1367.494 loss=0.0069 q=-1.285 eps=0.980
+[11:10:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:10:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=7
+[11:11:35] [INFO] src.dqn.trainer: ep=7 reward=-1398.763 loss=0.0062 q=-1.296 eps=0.976
+[11:11:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:11:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=8
+[11:12:14] [INFO] src.dqn.trainer: ep=8 reward=-1448.504 loss=0.0067 q=-1.346 eps=0.973
+[11:12:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:12:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=9
+[11:12:52] [INFO] src.dqn.trainer: ep=9 reward=-1377.655 loss=0.0069 q=-1.397 eps=0.969
+[11:12:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:12:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10
+[11:13:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:13:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:13:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:13:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:13:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:13:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:13:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:13:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:14:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:14:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:14:07] [INFO] src.dqn.trainer: ep=10 reward=-1391.118 loss=0.0066 q=-1.443 eps=0.966 | val_reward=-1360.427 val_CR=0.405 val_WT=7.671 val_DU=0.290
+[11:14:07] [INFO] src.dqn.trainer:   ↑ new best val_reward=-1360.427 → saved /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_best.pt
+[11:14:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:14:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=11
+[11:14:45] [INFO] src.dqn.trainer: ep=11 reward=-1341.439 loss=0.0067 q=-1.427 eps=0.962
+[11:14:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:14:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=12
+[11:15:25] [INFO] src.dqn.trainer: ep=12 reward=-1372.102 loss=0.0068 q=-1.507 eps=0.959
+[11:15:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:15:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=13
+[11:16:05] [INFO] src.dqn.trainer: ep=13 reward=-1443.863 loss=0.0068 q=-1.552 eps=0.956
+[11:16:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:16:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=14
+[11:16:44] [INFO] src.dqn.trainer: ep=14 reward=-1483.711 loss=0.0070 q=-1.622 eps=0.952
+[11:16:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:16:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=15
+[11:17:24] [INFO] src.dqn.trainer: ep=15 reward=-1455.824 loss=0.0075 q=-1.639 eps=0.949
+[11:17:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[11:17:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=16
+[11:18:05] [INFO] src.dqn.trainer: ep=16 reward=-1417.349 loss=0.0076 q=-1.691 eps=0.945
+[11:18:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:18:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=17
+[11:18:42] [INFO] src.dqn.trainer: ep=17 reward=-1270.123 loss=0.0075 q=-1.693 eps=0.942
+[11:18:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:18:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=18
+[11:19:22] [INFO] src.dqn.trainer: ep=18 reward=-1388.184 loss=0.0076 q=-1.704 eps=0.939
+[11:19:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:19:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=19
+[11:20:02] [INFO] src.dqn.trainer: ep=19 reward=-1409.348 loss=0.0076 q=-1.714 eps=0.935
+[11:20:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:20:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=20
+[11:20:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:20:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:20:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:20:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:20:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:20:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:21:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:21:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:21:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:21:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:21:15] [INFO] src.dqn.trainer: ep=20 reward=-1385.665 loss=0.0079 q=-1.781 eps=0.932 | val_reward=-1276.566 val_CR=0.406 val_WT=7.466 val_DU=0.277
+[11:21:15] [INFO] src.dqn.trainer:   ↑ new best val_reward=-1276.566 → saved /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_best.pt
+[11:21:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:21:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=21
+[11:21:56] [INFO] src.dqn.trainer: ep=21 reward=-1368.375 loss=0.0077 q=-1.802 eps=0.928
+[11:21:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 108)
+[11:21:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=22
+[11:22:36] [INFO] src.dqn.trainer: ep=22 reward=-1393.584 loss=0.0077 q=-1.796 eps=0.925
+[11:22:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:22:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=23
+[11:23:16] [INFO] src.dqn.trainer: ep=23 reward=-1365.547 loss=0.0077 q=-1.913 eps=0.922
+[11:23:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:23:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=24
+[11:23:58] [INFO] src.dqn.trainer: ep=24 reward=-1372.109 loss=0.0078 q=-1.903 eps=0.918
+[11:23:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:23:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=25
+[11:24:42] [INFO] src.dqn.trainer: ep=25 reward=-1446.369 loss=0.0081 q=-1.892 eps=0.915
+[11:24:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[11:24:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=26
+[11:25:27] [INFO] src.dqn.trainer: ep=26 reward=-1443.280 loss=0.0081 q=-1.937 eps=0.911
+[11:25:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:25:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=27
+[11:26:14] [INFO] src.dqn.trainer: ep=27 reward=-1466.790 loss=0.0079 q=-2.015 eps=0.908
+[11:26:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:26:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=28
+[11:26:59] [INFO] src.dqn.trainer: ep=28 reward=-1340.254 loss=0.0075 q=-1.994 eps=0.904
+[11:26:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:26:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=29
+[11:27:45] [INFO] src.dqn.trainer: ep=29 reward=-1447.437 loss=0.0076 q=-2.005 eps=0.901
+[11:27:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:27:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=30
+[11:28:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:28:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:28:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:28:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:28:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:28:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:28:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:28:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:28:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:28:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:28:59] [INFO] src.dqn.trainer: ep=30 reward=-1308.612 loss=0.0077 q=-2.123 eps=0.898 | val_reward=-1329.181 val_CR=0.416 val_WT=7.505 val_DU=0.284
+[11:28:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 103)
+[11:28:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=31
+[11:29:44] [INFO] src.dqn.trainer: ep=31 reward=-1445.037 loss=0.0077 q=-2.058 eps=0.894
+[11:29:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:29:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=32
+[11:30:25] [INFO] src.dqn.trainer: ep=32 reward=-1427.218 loss=0.0074 q=-2.114 eps=0.891
+[11:30:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:30:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=33
+[11:31:08] [INFO] src.dqn.trainer: ep=33 reward=-1431.363 loss=0.0076 q=-2.082 eps=0.887
+[11:31:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:31:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=34
+[11:31:50] [INFO] src.dqn.trainer: ep=34 reward=-1444.167 loss=0.0076 q=-2.063 eps=0.884
+[11:31:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:31:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=35
+[11:32:32] [INFO] src.dqn.trainer: ep=35 reward=-1419.011 loss=0.0073 q=-2.139 eps=0.881
+[11:32:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:32:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=36
+[11:33:15] [INFO] src.dqn.trainer: ep=36 reward=-1377.240 loss=0.0074 q=-2.211 eps=0.877
+[11:33:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:33:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=37
+[11:33:55] [INFO] src.dqn.trainer: ep=37 reward=-1407.423 loss=0.0074 q=-2.162 eps=0.874
+[11:33:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:33:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=38
+[11:34:36] [INFO] src.dqn.trainer: ep=38 reward=-1439.787 loss=0.0075 q=-2.221 eps=0.870
+[11:34:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:34:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=39
+[11:35:18] [INFO] src.dqn.trainer: ep=39 reward=-1383.388 loss=0.0073 q=-2.276 eps=0.867
+[11:35:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:35:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=40
+[11:36:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:36:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:36:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:36:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:36:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:36:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:36:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:36:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:36:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:36:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:36:35] [INFO] src.dqn.trainer: ep=40 reward=-1404.654 loss=0.0071 q=-2.258 eps=0.863 | val_reward=-1315.966 val_CR=0.410 val_WT=7.502 val_DU=0.277
+[11:36:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:36:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=41
+[11:37:16] [INFO] src.dqn.trainer: ep=41 reward=-1362.671 loss=0.0074 q=-2.281 eps=0.860
+[11:37:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[11:37:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=42
+[11:37:57] [INFO] src.dqn.trainer: ep=42 reward=-1460.245 loss=0.0075 q=-2.178 eps=0.857
+[11:37:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:37:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=43
+[11:38:38] [INFO] src.dqn.trainer: ep=43 reward=-1286.191 loss=0.0074 q=-2.396 eps=0.853
+[11:38:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:38:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=44
+[11:39:21] [INFO] src.dqn.trainer: ep=44 reward=-1503.123 loss=0.0076 q=-2.212 eps=0.850
+[11:39:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:39:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=45
+[11:40:02] [INFO] src.dqn.trainer: ep=45 reward=-1406.014 loss=0.0077 q=-2.326 eps=0.846
+[11:40:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 72)
+[11:40:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=46
+[11:40:45] [INFO] src.dqn.trainer: ep=46 reward=-1382.542 loss=0.0075 q=-2.294 eps=0.843
+[11:40:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:40:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=47
+[11:41:27] [INFO] src.dqn.trainer: ep=47 reward=-1327.307 loss=0.0076 q=-2.354 eps=0.840
+[11:41:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:41:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=48
+[11:42:10] [INFO] src.dqn.trainer: ep=48 reward=-1460.096 loss=0.0077 q=-2.305 eps=0.836
+[11:42:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:42:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=49
+[11:42:51] [INFO] src.dqn.trainer: ep=49 reward=-1365.775 loss=0.0077 q=-2.397 eps=0.833
+[11:42:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[11:42:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=50
+[11:43:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:43:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:43:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:43:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:43:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:43:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:43:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:43:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:44:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:44:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:44:10] [INFO] src.dqn.trainer: ep=50 reward=-1419.512 loss=0.0075 q=-2.387 eps=0.829 | val_reward=-1362.315 val_CR=0.410 val_WT=7.501 val_DU=0.296
+[11:44:10] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep50.pt
+[11:44:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 71)
+[11:44:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=51
+[11:44:57] [INFO] src.dqn.trainer: ep=51 reward=-1403.318 loss=0.0073 q=-2.416 eps=0.826
+[11:44:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:44:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=52
+[11:45:37] [INFO] src.dqn.trainer: ep=52 reward=-1354.785 loss=0.0072 q=-2.377 eps=0.823
+[11:45:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:45:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=53
+[11:46:23] [INFO] src.dqn.trainer: ep=53 reward=-1431.689 loss=0.0072 q=-2.433 eps=0.819
+[11:46:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:46:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=54
+[11:47:04] [INFO] src.dqn.trainer: ep=54 reward=-1341.630 loss=0.0071 q=-2.343 eps=0.816
+[11:47:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:47:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=55
+[11:47:46] [INFO] src.dqn.trainer: ep=55 reward=-1360.905 loss=0.0072 q=-2.508 eps=0.812
+[11:47:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:47:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=56
+[11:48:29] [INFO] src.dqn.trainer: ep=56 reward=-1347.579 loss=0.0071 q=-2.351 eps=0.809
+[11:48:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:48:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=57
+[11:49:11] [INFO] src.dqn.trainer: ep=57 reward=-1315.190 loss=0.0070 q=-2.419 eps=0.805
+[11:49:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:49:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=58
+[11:49:53] [INFO] src.dqn.trainer: ep=58 reward=-1275.877 loss=0.0071 q=-2.469 eps=0.802
+[11:49:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:49:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=59
+[11:50:40] [INFO] src.dqn.trainer: ep=59 reward=-1402.255 loss=0.0072 q=-2.474 eps=0.799
+[11:50:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:50:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=60
+[11:51:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:51:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:51:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:51:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:51:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:51:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:51:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:51:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:51:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:51:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:51:59] [INFO] src.dqn.trainer: ep=60 reward=-1336.988 loss=0.0071 q=-2.478 eps=0.795 | val_reward=-1303.755 val_CR=0.412 val_WT=7.572 val_DU=0.280
+[11:51:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:51:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=61
+[11:52:46] [INFO] src.dqn.trainer: ep=61 reward=-1445.122 loss=0.0071 q=-2.425 eps=0.792
+[11:52:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:52:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=62
+[11:53:37] [INFO] src.dqn.trainer: ep=62 reward=-1439.555 loss=0.0074 q=-2.343 eps=0.788
+[11:53:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:53:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=63
+[11:54:26] [INFO] src.dqn.trainer: ep=63 reward=-1382.945 loss=0.0075 q=-2.412 eps=0.785
+[11:54:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:54:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=64
+[11:55:17] [INFO] src.dqn.trainer: ep=64 reward=-1428.385 loss=0.0072 q=-2.432 eps=0.782
+[11:55:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:55:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=65
+[11:56:05] [INFO] src.dqn.trainer: ep=65 reward=-1397.030 loss=0.0073 q=-2.325 eps=0.778
+[11:56:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:56:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=66
+[11:56:52] [INFO] src.dqn.trainer: ep=66 reward=-1350.739 loss=0.0073 q=-2.478 eps=0.775
+[11:56:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:56:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=67
+[11:57:37] [INFO] src.dqn.trainer: ep=67 reward=-1384.049 loss=0.0072 q=-2.438 eps=0.771
+[11:57:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:57:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=68
+[11:58:21] [INFO] src.dqn.trainer: ep=68 reward=-1404.895 loss=0.0074 q=-2.478 eps=0.768
+[11:58:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:58:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=69
+[11:59:06] [INFO] src.dqn.trainer: ep=69 reward=-1399.852 loss=0.0074 q=-2.486 eps=0.765
+[11:59:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:59:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=70
+[11:59:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:59:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:59:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:59:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:00:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:00:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:00:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:00:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:00:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:00:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:00:23] [INFO] src.dqn.trainer: ep=70 reward=-1385.274 loss=0.0073 q=-2.558 eps=0.761 | val_reward=-1317.286 val_CR=0.406 val_WT=7.408 val_DU=0.276
+[12:00:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:00:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=71
+[12:01:10] [INFO] src.dqn.trainer: ep=71 reward=-1501.070 loss=0.0073 q=-2.421 eps=0.758
+[12:01:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:01:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=72
+[12:01:53] [INFO] src.dqn.trainer: ep=72 reward=-1292.907 loss=0.0076 q=-2.582 eps=0.754
+[12:01:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:01:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=73
+[12:02:38] [INFO] src.dqn.trainer: ep=73 reward=-1427.051 loss=0.0077 q=-2.533 eps=0.751
+[12:02:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[12:02:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=74
+[12:03:29] [INFO] src.dqn.trainer: ep=74 reward=-1414.162 loss=0.0072 q=-2.654 eps=0.747
+[12:03:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[12:03:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=75
+[12:04:12] [INFO] src.dqn.trainer: ep=75 reward=-1346.198 loss=0.0076 q=-2.535 eps=0.744
+[12:04:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:04:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=76
+[12:04:57] [INFO] src.dqn.trainer: ep=76 reward=-1370.144 loss=0.0080 q=-2.579 eps=0.741
+[12:04:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:04:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=77
+[12:05:40] [INFO] src.dqn.trainer: ep=77 reward=-1397.261 loss=0.0080 q=-2.423 eps=0.737
+[12:05:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:05:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=78
+[12:06:28] [INFO] src.dqn.trainer: ep=78 reward=-1444.699 loss=0.0079 q=-2.460 eps=0.734
+[12:06:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[12:06:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=79
+[12:07:15] [INFO] src.dqn.trainer: ep=79 reward=-1511.269 loss=0.0084 q=-2.343 eps=0.730
+[12:07:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:07:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=80
+[12:08:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:08:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:08:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:08:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:08:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:08:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:08:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:08:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:08:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:08:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:08:32] [INFO] src.dqn.trainer: ep=80 reward=-1331.590 loss=0.0085 q=-2.603 eps=0.727 | val_reward=-1281.171 val_CR=0.415 val_WT=7.424 val_DU=0.278
+[12:08:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:08:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=81
+[12:09:17] [INFO] src.dqn.trainer: ep=81 reward=-1432.934 loss=0.0085 q=-2.419 eps=0.724
+[12:09:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:09:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=82
+[12:10:06] [INFO] src.dqn.trainer: ep=82 reward=-1402.602 loss=0.0087 q=-2.495 eps=0.720
+[12:10:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:10:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=83
+[12:10:54] [INFO] src.dqn.trainer: ep=83 reward=-1476.657 loss=0.0088 q=-2.479 eps=0.717
+[12:10:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:10:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=84
+[12:11:42] [INFO] src.dqn.trainer: ep=84 reward=-1425.128 loss=0.0088 q=-2.484 eps=0.713
+[12:11:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:11:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=85
+[12:12:26] [INFO] src.dqn.trainer: ep=85 reward=-1346.664 loss=0.0085 q=-2.552 eps=0.710
+[12:12:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:12:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=86
+[12:13:10] [INFO] src.dqn.trainer: ep=86 reward=-1402.978 loss=0.0088 q=-2.543 eps=0.707
+[12:13:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:13:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=87
+[12:13:53] [INFO] src.dqn.trainer: ep=87 reward=-1332.754 loss=0.0088 q=-2.563 eps=0.703
+[12:13:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:13:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=88
+[12:14:37] [INFO] src.dqn.trainer: ep=88 reward=-1360.022 loss=0.0085 q=-2.642 eps=0.700
+[12:14:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:14:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=89
+[12:15:23] [INFO] src.dqn.trainer: ep=89 reward=-1333.239 loss=0.0082 q=-2.623 eps=0.696
+[12:15:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[12:15:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=90
+[12:16:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:16:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:16:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:16:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:16:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:16:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:16:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:16:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:16:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:16:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:16:41] [INFO] src.dqn.trainer: ep=90 reward=-1369.521 loss=0.0086 q=-2.632 eps=0.693 | val_reward=-1326.412 val_CR=0.411 val_WT=7.517 val_DU=0.288
+[12:16:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:16:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=91
+[12:17:28] [INFO] src.dqn.trainer: ep=91 reward=-1390.905 loss=0.0088 q=-2.515 eps=0.689
+[12:17:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:17:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=92
+[12:18:15] [INFO] src.dqn.trainer: ep=92 reward=-1454.652 loss=0.0089 q=-2.473 eps=0.686
+[12:18:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[12:18:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=93
+[12:19:01] [INFO] src.dqn.trainer: ep=93 reward=-1352.860 loss=0.0090 q=-2.567 eps=0.683
+[12:19:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:19:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=94
+[12:19:52] [INFO] src.dqn.trainer: ep=94 reward=-1454.759 loss=0.0089 q=-2.505 eps=0.679
+[12:19:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:19:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=95
+[12:20:40] [INFO] src.dqn.trainer: ep=95 reward=-1358.943 loss=0.0089 q=-2.548 eps=0.676
+[12:20:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:20:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=96
+[12:21:28] [INFO] src.dqn.trainer: ep=96 reward=-1342.299 loss=0.0087 q=-2.643 eps=0.672
+[12:21:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:21:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=97
+[12:22:17] [INFO] src.dqn.trainer: ep=97 reward=-1394.191 loss=0.0091 q=-2.546 eps=0.669
+[12:22:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:22:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=98
+[12:23:05] [INFO] src.dqn.trainer: ep=98 reward=-1374.569 loss=0.0088 q=-2.659 eps=0.666
+[12:23:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:23:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=99
+[12:23:53] [INFO] src.dqn.trainer: ep=99 reward=-1412.045 loss=0.0084 q=-2.615 eps=0.662
+[12:23:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:23:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=100
+[12:24:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:24:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:24:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:24:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:24:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:24:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:24:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:24:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:25:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:25:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:25:11] [INFO] src.dqn.trainer: ep=100 reward=-1416.430 loss=0.0087 q=-2.399 eps=0.659 | val_reward=-1313.883 val_CR=0.408 val_WT=7.501 val_DU=0.283
+[12:25:11] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep100.pt
+[12:25:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:25:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=101
+[12:25:56] [INFO] src.dqn.trainer: ep=101 reward=-1318.747 loss=0.0087 q=-2.705 eps=0.655
+[12:25:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:25:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=102
+[12:26:45] [INFO] src.dqn.trainer: ep=102 reward=-1425.621 loss=0.0084 q=-2.553 eps=0.652
+[12:26:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[12:26:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=103
+[12:27:29] [INFO] src.dqn.trainer: ep=103 reward=-1458.422 loss=0.0087 q=-2.372 eps=0.649
+[12:27:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:27:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=104
+[12:28:12] [INFO] src.dqn.trainer: ep=104 reward=-1336.947 loss=0.0089 q=-2.675 eps=0.645
+[12:28:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:28:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=105
+[12:29:00] [INFO] src.dqn.trainer: ep=105 reward=-1385.724 loss=0.0086 q=-2.643 eps=0.642
+[12:29:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:29:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=106
+[12:29:47] [INFO] src.dqn.trainer: ep=106 reward=-1350.537 loss=0.0084 q=-2.639 eps=0.638
+[12:29:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:29:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=107
+[12:30:36] [INFO] src.dqn.trainer: ep=107 reward=-1452.305 loss=0.0087 q=-2.579 eps=0.635
+[12:30:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:30:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=108
+[12:31:24] [INFO] src.dqn.trainer: ep=108 reward=-1423.604 loss=0.0089 q=-2.602 eps=0.631
+[12:31:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:31:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=109
+[12:32:08] [INFO] src.dqn.trainer: ep=109 reward=-1344.915 loss=0.0088 q=-2.707 eps=0.628
+[12:32:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:32:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=110
+[12:32:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:32:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:33:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:33:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:33:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:33:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:33:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:33:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:33:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:33:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:33:27] [INFO] src.dqn.trainer: ep=110 reward=-1372.390 loss=0.0083 q=-2.633 eps=0.625 | val_reward=-1315.446 val_CR=0.406 val_WT=7.496 val_DU=0.283
+[12:33:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:33:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=111
+[12:34:15] [INFO] src.dqn.trainer: ep=111 reward=-1377.805 loss=0.0086 q=-2.692 eps=0.621
+[12:34:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:34:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=112
+[12:35:01] [INFO] src.dqn.trainer: ep=112 reward=-1295.112 loss=0.0084 q=-2.755 eps=0.618
+[12:35:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:35:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=113
+[12:35:52] [INFO] src.dqn.trainer: ep=113 reward=-1418.988 loss=0.0083 q=-2.553 eps=0.614
+[12:35:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[12:35:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=114
+[12:36:45] [INFO] src.dqn.trainer: ep=114 reward=-1446.909 loss=0.0084 q=-2.653 eps=0.611
+[12:36:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[12:36:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=115
+[12:37:32] [INFO] src.dqn.trainer: ep=115 reward=-1402.229 loss=0.0085 q=-2.538 eps=0.608
+[12:37:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:37:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=116
+[12:38:21] [INFO] src.dqn.trainer: ep=116 reward=-1433.549 loss=0.0087 q=-2.554 eps=0.604
+[12:38:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:38:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=117
+[12:39:07] [INFO] src.dqn.trainer: ep=117 reward=-1317.095 loss=0.0086 q=-2.746 eps=0.601
+[12:39:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:39:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=118
+[12:39:56] [INFO] src.dqn.trainer: ep=118 reward=-1428.486 loss=0.0088 q=-2.579 eps=0.597
+[12:39:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[12:39:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=119
+[12:40:44] [INFO] src.dqn.trainer: ep=119 reward=-1351.314 loss=0.0090 q=-2.668 eps=0.594
+[12:40:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:40:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=120
+[12:41:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:41:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:41:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:41:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:41:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:41:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:41:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:41:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:41:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:41:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:42:06] [INFO] src.dqn.trainer: ep=120 reward=-1364.190 loss=0.0085 q=-2.724 eps=0.591 | val_reward=-1316.653 val_CR=0.406 val_WT=7.487 val_DU=0.280
+[12:42:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 115)
+[12:42:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=121
+[12:42:52] [INFO] src.dqn.trainer: ep=121 reward=-1311.354 loss=0.0083 q=-2.619 eps=0.587
+[12:42:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:42:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=122
+[12:43:40] [INFO] src.dqn.trainer: ep=122 reward=-1352.067 loss=0.0088 q=-2.753 eps=0.584
+[12:43:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:43:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=123
+[12:44:23] [INFO] src.dqn.trainer: ep=123 reward=-1336.725 loss=0.0085 q=-2.775 eps=0.580
+[12:44:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:44:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=124
+[12:45:03] [INFO] src.dqn.trainer: ep=124 reward=-1447.740 loss=0.0084 q=-2.536 eps=0.577
+[12:45:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:45:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=125
+[12:45:42] [INFO] src.dqn.trainer: ep=125 reward=-1403.407 loss=0.0090 q=-2.596 eps=0.573
+[12:45:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:45:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=126
+[12:46:27] [INFO] src.dqn.trainer: ep=126 reward=-1408.200 loss=0.0091 q=-2.584 eps=0.570
+[12:46:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[12:46:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=127
+[12:47:13] [INFO] src.dqn.trainer: ep=127 reward=-1415.843 loss=0.0090 q=-2.532 eps=0.567
+[12:47:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:47:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=128
+[12:47:59] [INFO] src.dqn.trainer: ep=128 reward=-1360.057 loss=0.0087 q=-2.741 eps=0.563
+[12:47:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:47:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=129
+[12:48:43] [INFO] src.dqn.trainer: ep=129 reward=-1356.225 loss=0.0089 q=-2.749 eps=0.560
+[12:48:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:48:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=130
+[12:49:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:49:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:49:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:49:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:49:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:49:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:49:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:49:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:49:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:49:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:50:01] [INFO] src.dqn.trainer: ep=130 reward=-1394.307 loss=0.0088 q=-2.688 eps=0.556 | val_reward=-1308.782 val_CR=0.399 val_WT=7.530 val_DU=0.283
+[12:50:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:50:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=131
+[12:50:45] [INFO] src.dqn.trainer: ep=131 reward=-1434.861 loss=0.0086 q=-2.711 eps=0.553
+[12:50:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:50:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=132
+[12:51:28] [INFO] src.dqn.trainer: ep=132 reward=-1379.829 loss=0.0089 q=-2.736 eps=0.550
+[12:51:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:51:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=133
+[12:52:09] [INFO] src.dqn.trainer: ep=133 reward=-1393.235 loss=0.0089 q=-2.698 eps=0.546
+[12:52:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:52:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=134
+[12:52:50] [INFO] src.dqn.trainer: ep=134 reward=-1299.500 loss=0.0087 q=-2.888 eps=0.543
+[12:52:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[12:52:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=135
+[12:53:32] [INFO] src.dqn.trainer: ep=135 reward=-1389.016 loss=0.0085 q=-2.750 eps=0.539
+[12:53:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:53:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=136
+[12:54:14] [INFO] src.dqn.trainer: ep=136 reward=-1362.365 loss=0.0090 q=-2.638 eps=0.536
+[12:54:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:54:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=137
+[12:54:53] [INFO] src.dqn.trainer: ep=137 reward=-1311.693 loss=0.0092 q=-2.810 eps=0.532
+[12:54:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 110)
+[12:54:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=138
+[12:55:35] [INFO] src.dqn.trainer: ep=138 reward=-1386.049 loss=0.0090 q=-2.750 eps=0.529
+[12:55:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[12:55:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=139
+[12:56:16] [INFO] src.dqn.trainer: ep=139 reward=-1349.566 loss=0.0092 q=-2.764 eps=0.526
+[12:56:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[12:56:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=140
+[12:56:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:56:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:57:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:57:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:57:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:57:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:57:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:57:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:57:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:57:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:57:30] [INFO] src.dqn.trainer: ep=140 reward=-1364.880 loss=0.0092 q=-2.822 eps=0.522 | val_reward=-1288.489 val_CR=0.404 val_WT=7.429 val_DU=0.280
+[12:57:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:57:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=141
+[12:58:13] [INFO] src.dqn.trainer: ep=141 reward=-1383.487 loss=0.0092 q=-2.585 eps=0.519
+[12:58:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 77)
+[12:58:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=142
+[12:58:57] [INFO] src.dqn.trainer: ep=142 reward=-1365.667 loss=0.0092 q=-2.787 eps=0.515
+[12:58:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:58:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=143
+[12:59:37] [INFO] src.dqn.trainer: ep=143 reward=-1285.605 loss=0.0091 q=-2.871 eps=0.512
+[12:59:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 76)
+[12:59:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=144
+[13:00:19] [INFO] src.dqn.trainer: ep=144 reward=-1310.988 loss=0.0089 q=-2.868 eps=0.509
+[13:00:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[13:00:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=145
+[13:01:03] [INFO] src.dqn.trainer: ep=145 reward=-1377.591 loss=0.0087 q=-2.671 eps=0.505
+[13:01:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:01:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=146
+[13:01:45] [INFO] src.dqn.trainer: ep=146 reward=-1394.676 loss=0.0089 q=-2.815 eps=0.502
+[13:01:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[13:01:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=147
+[13:02:26] [INFO] src.dqn.trainer: ep=147 reward=-1350.123 loss=0.0091 q=-2.810 eps=0.498
+[13:02:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:02:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=148
+[13:03:07] [INFO] src.dqn.trainer: ep=148 reward=-1304.953 loss=0.0090 q=-2.800 eps=0.495
+[13:03:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[13:03:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=149
+[13:03:48] [INFO] src.dqn.trainer: ep=149 reward=-1318.642 loss=0.0089 q=-2.804 eps=0.492
+[13:03:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 110)
+[13:03:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=150
+[13:04:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:04:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:04:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:04:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:04:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:04:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:04:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:04:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:04:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:04:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:05:04] [INFO] src.dqn.trainer: ep=150 reward=-1374.352 loss=0.0095 q=-2.787 eps=0.488 | val_reward=-1291.656 val_CR=0.406 val_WT=7.405 val_DU=0.277
+[13:05:04] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep150.pt
+[13:05:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:05:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=151
+[13:05:46] [INFO] src.dqn.trainer: ep=151 reward=-1354.946 loss=0.0093 q=-2.868 eps=0.485
+[13:05:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[13:05:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=152
+[13:06:29] [INFO] src.dqn.trainer: ep=152 reward=-1339.857 loss=0.0089 q=-2.901 eps=0.481
+[13:06:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[13:06:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=153
+[13:07:12] [INFO] src.dqn.trainer: ep=153 reward=-1303.351 loss=0.0089 q=-2.893 eps=0.478
+[13:07:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[13:07:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=154
+[13:07:55] [INFO] src.dqn.trainer: ep=154 reward=-1307.912 loss=0.0092 q=-2.862 eps=0.474
+[13:07:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[13:07:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=155
+[13:08:40] [INFO] src.dqn.trainer: ep=155 reward=-1336.742 loss=0.0091 q=-2.773 eps=0.471
+[13:08:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[13:08:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=156
+[13:09:23] [INFO] src.dqn.trainer: ep=156 reward=-1334.374 loss=0.0090 q=-2.732 eps=0.468
+[13:09:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:09:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=157
+[13:10:06] [INFO] src.dqn.trainer: ep=157 reward=-1292.989 loss=0.0096 q=-2.860 eps=0.464
+[13:10:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[13:10:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=158
+[13:10:52] [INFO] src.dqn.trainer: ep=158 reward=-1333.213 loss=0.0094 q=-2.890 eps=0.461
+[13:10:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[13:10:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=159
+[13:11:34] [INFO] src.dqn.trainer: ep=159 reward=-1342.507 loss=0.0091 q=-2.855 eps=0.457
+[13:11:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[13:11:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=160
+[13:12:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:12:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:12:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:12:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:12:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:12:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:12:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:12:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:12:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:12:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:12:50] [INFO] src.dqn.trainer: ep=160 reward=-1336.353 loss=0.0090 q=-2.864 eps=0.454 | val_reward=-1335.515 val_CR=0.406 val_WT=7.485 val_DU=0.296
+[13:12:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[13:12:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=161
+[13:13:37] [INFO] src.dqn.trainer: ep=161 reward=-1272.716 loss=0.0094 q=-3.041 eps=0.451
+[13:13:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[13:13:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=162
+[13:14:26] [INFO] src.dqn.trainer: ep=162 reward=-1452.124 loss=0.0092 q=-2.812 eps=0.447
+[13:14:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[13:14:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=163
+[13:15:11] [INFO] src.dqn.trainer: ep=163 reward=-1316.307 loss=0.0090 q=-2.803 eps=0.444
+[13:15:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[13:15:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=164
+[13:16:01] [INFO] src.dqn.trainer: ep=164 reward=-1316.726 loss=0.0092 q=-2.972 eps=0.440
+[13:16:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[13:16:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=165
+[13:16:49] [INFO] src.dqn.trainer: ep=165 reward=-1267.376 loss=0.0088 q=-3.075 eps=0.437
+[13:16:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:16:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=166
+[13:17:38] [INFO] src.dqn.trainer: ep=166 reward=-1312.609 loss=0.0088 q=-2.830 eps=0.433
+[13:17:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[13:17:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=167
+[13:18:28] [INFO] src.dqn.trainer: ep=167 reward=-1450.516 loss=0.0090 q=-2.714 eps=0.430
+[13:18:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[13:18:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=168
+[13:19:16] [INFO] src.dqn.trainer: ep=168 reward=-1339.331 loss=0.0093 q=-2.729 eps=0.427
+[13:19:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[13:19:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=169
+[13:20:07] [INFO] src.dqn.trainer: ep=169 reward=-1411.711 loss=0.0092 q=-2.781 eps=0.423
+[13:20:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[13:20:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=170
+[13:21:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:21:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:21:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:21:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:21:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:21:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:21:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:21:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:21:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:21:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:21:33] [INFO] src.dqn.trainer: ep=170 reward=-1366.735 loss=0.0089 q=-2.889 eps=0.420 | val_reward=-1345.583 val_CR=0.401 val_WT=7.587 val_DU=0.297
+[13:21:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[13:21:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=171
+[13:22:18] [INFO] src.dqn.trainer: ep=171 reward=-1347.720 loss=0.0095 q=-2.769 eps=0.416
+[13:22:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[13:22:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=172
+[13:23:05] [INFO] src.dqn.trainer: ep=172 reward=-1383.393 loss=0.0094 q=-2.862 eps=0.413
+[13:23:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[13:23:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=173
+[13:23:47] [INFO] src.dqn.trainer: ep=173 reward=-1328.110 loss=0.0092 q=-2.833 eps=0.410
+[13:23:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[13:23:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=174
+[13:24:27] [INFO] src.dqn.trainer: ep=174 reward=-1351.768 loss=0.0090 q=-2.862 eps=0.406
+[13:24:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[13:24:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=175
+[13:25:09] [INFO] src.dqn.trainer: ep=175 reward=-1254.572 loss=0.0090 q=-3.049 eps=0.403
+[13:25:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:25:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=176
+[13:25:56] [INFO] src.dqn.trainer: ep=176 reward=-1368.784 loss=0.0088 q=-2.915 eps=0.399
+[13:25:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[13:25:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=177
+[13:26:35] [INFO] src.dqn.trainer: ep=177 reward=-1242.292 loss=0.0084 q=-2.974 eps=0.396
+[13:26:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:26:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=178
+[13:27:15] [INFO] src.dqn.trainer: ep=178 reward=-1390.639 loss=0.0087 q=-2.751 eps=0.393
+[13:27:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 76)
+[13:27:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=179
+[13:27:54] [INFO] src.dqn.trainer: ep=179 reward=-1382.674 loss=0.0088 q=-2.942 eps=0.389
+[13:27:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 108)
+[13:27:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=180
+[13:28:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:28:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:28:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:28:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:28:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:28:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:28:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:28:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:28:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:28:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:29:03] [INFO] src.dqn.trainer: ep=180 reward=-1280.590 loss=0.0088 q=-2.951 eps=0.386 | val_reward=-1322.075 val_CR=0.398 val_WT=7.440 val_DU=0.290
+[13:29:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[13:29:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=181
+[13:29:41] [INFO] src.dqn.trainer: ep=181 reward=-1362.704 loss=0.0085 q=-2.804 eps=0.382
+[13:29:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[13:29:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=182
+[13:30:21] [INFO] src.dqn.trainer: ep=182 reward=-1353.518 loss=0.0090 q=-2.965 eps=0.379
+[13:30:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[13:30:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=183
+[13:30:59] [INFO] src.dqn.trainer: ep=183 reward=-1369.351 loss=0.0090 q=-2.928 eps=0.375
+[13:30:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[13:30:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=184
+[13:31:37] [INFO] src.dqn.trainer: ep=184 reward=-1252.619 loss=0.0089 q=-3.079 eps=0.372
+[13:31:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:31:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=185
+[13:32:16] [INFO] src.dqn.trainer: ep=185 reward=-1387.442 loss=0.0086 q=-2.935 eps=0.369
+[13:32:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[13:32:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=186
+[13:32:54] [INFO] src.dqn.trainer: ep=186 reward=-1340.363 loss=0.0088 q=-2.902 eps=0.365
+[13:32:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[13:32:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=187
+[13:33:33] [INFO] src.dqn.trainer: ep=187 reward=-1356.347 loss=0.0089 q=-3.017 eps=0.362
+[13:33:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[13:33:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=188
+[13:34:14] [INFO] src.dqn.trainer: ep=188 reward=-1273.890 loss=0.0084 q=-3.112 eps=0.358
+[13:34:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:34:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=189
+[13:34:56] [INFO] src.dqn.trainer: ep=189 reward=-1245.095 loss=0.0084 q=-3.156 eps=0.355
+[13:34:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[13:34:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=190
+[13:35:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:35:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:35:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:35:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:35:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:35:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:36:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:36:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:36:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:36:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:36:16] [INFO] src.dqn.trainer: ep=190 reward=-1306.889 loss=0.0086 q=-3.048 eps=0.352 | val_reward=-1324.437 val_CR=0.407 val_WT=7.572 val_DU=0.282
+[13:36:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[13:36:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=191
+[13:37:03] [INFO] src.dqn.trainer: ep=191 reward=-1332.410 loss=0.0086 q=-2.980 eps=0.348
+[13:37:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[13:37:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=192
+[13:37:51] [INFO] src.dqn.trainer: ep=192 reward=-1327.016 loss=0.0093 q=-2.932 eps=0.345
+[13:37:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[13:37:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=193
+[13:38:39] [INFO] src.dqn.trainer: ep=193 reward=-1337.246 loss=0.0096 q=-3.020 eps=0.341
+[13:38:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[13:38:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=194
+[13:39:27] [INFO] src.dqn.trainer: ep=194 reward=-1308.087 loss=0.0093 q=-3.085 eps=0.338
+[13:39:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[13:39:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=195
+[13:40:14] [INFO] src.dqn.trainer: ep=195 reward=-1425.808 loss=0.0094 q=-2.866 eps=0.335
+[13:40:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[13:40:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=196
+[13:41:01] [INFO] src.dqn.trainer: ep=196 reward=-1329.637 loss=0.0095 q=-2.967 eps=0.331
+[13:41:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:41:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=197
+[13:41:43] [INFO] src.dqn.trainer: ep=197 reward=-1256.744 loss=0.0095 q=-3.079 eps=0.328
+[13:41:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[13:41:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=198
+[13:42:30] [INFO] src.dqn.trainer: ep=198 reward=-1342.774 loss=0.0095 q=-2.985 eps=0.324
+[13:42:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[13:42:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=199
+[13:43:21] [INFO] src.dqn.trainer: ep=199 reward=-1307.889 loss=0.0092 q=-3.018 eps=0.321
+[13:43:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[13:43:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=200
+[13:44:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:44:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:44:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:44:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:44:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:44:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:44:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:44:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:44:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:44:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:45:02] [INFO] src.dqn.trainer: ep=200 reward=-1389.003 loss=0.0093 q=-2.907 eps=0.317 | val_reward=-1269.948 val_CR=0.408 val_WT=7.319 val_DU=0.282
+[13:45:02] [INFO] src.dqn.trainer:   ↑ new best val_reward=-1269.948 → saved /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_best.pt
+[13:45:02] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep200.pt
+[13:45:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[13:45:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=201
+[13:46:10] [INFO] src.dqn.trainer: ep=201 reward=-1370.890 loss=0.0091 q=-2.975 eps=0.314
+[13:46:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:46:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=202
+[13:47:14] [INFO] src.dqn.trainer: ep=202 reward=-1296.251 loss=0.0088 q=-3.090 eps=0.311
+[13:47:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:47:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=203
+[13:48:20] [INFO] src.dqn.trainer: ep=203 reward=-1364.580 loss=0.0090 q=-2.931 eps=0.307
+[13:48:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[13:48:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=204
+[13:49:25] [INFO] src.dqn.trainer: ep=204 reward=-1362.166 loss=0.0093 q=-3.009 eps=0.304
+[13:49:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:49:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=205
+[13:50:34] [INFO] src.dqn.trainer: ep=205 reward=-1384.956 loss=0.0093 q=-3.154 eps=0.300
+[13:50:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:50:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=206
+[13:51:40] [INFO] src.dqn.trainer: ep=206 reward=-1333.805 loss=0.0088 q=-3.128 eps=0.297
+[13:51:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[13:51:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=207
+[13:52:47] [INFO] src.dqn.trainer: ep=207 reward=-1310.645 loss=0.0091 q=-3.253 eps=0.294
+[13:52:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[13:52:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=208
+[13:53:41] [INFO] src.dqn.trainer: ep=208 reward=-1345.814 loss=0.0090 q=-2.981 eps=0.290
+[13:53:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:53:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=209
+[13:54:30] [INFO] src.dqn.trainer: ep=209 reward=-1264.825 loss=0.0088 q=-3.196 eps=0.287
+[13:54:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[13:54:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=210
+[13:55:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:55:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[13:55:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[13:55:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[13:55:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[13:55:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[13:55:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[13:55:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[13:55:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[13:55:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[13:55:55] [INFO] src.dqn.trainer: ep=210 reward=-1314.642 loss=0.0087 q=-3.091 eps=0.283 | val_reward=-1304.163 val_CR=0.412 val_WT=7.445 val_DU=0.283
+[13:55:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[13:55:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=211
+[13:56:48] [INFO] src.dqn.trainer: ep=211 reward=-1327.371 loss=0.0089 q=-3.200 eps=0.280
+[13:56:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[13:56:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=212
+[13:57:38] [INFO] src.dqn.trainer: ep=212 reward=-1329.411 loss=0.0087 q=-3.125 eps=0.276
+[13:57:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[13:57:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=213
+[13:58:30] [INFO] src.dqn.trainer: ep=213 reward=-1437.195 loss=0.0090 q=-2.953 eps=0.273
+[13:58:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[13:58:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=214
+[13:59:21] [INFO] src.dqn.trainer: ep=214 reward=-1331.238 loss=0.0092 q=-3.091 eps=0.270
+[13:59:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[13:59:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=215
+[14:00:14] [INFO] src.dqn.trainer: ep=215 reward=-1341.766 loss=0.0088 q=-3.202 eps=0.266
+[14:00:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:00:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=216
+[14:01:05] [INFO] src.dqn.trainer: ep=216 reward=-1280.473 loss=0.0084 q=-3.203 eps=0.263
+[14:01:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 77)
+[14:01:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=217
+[14:01:56] [INFO] src.dqn.trainer: ep=217 reward=-1225.593 loss=0.0083 q=-3.295 eps=0.259
+[14:01:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[14:01:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=218
+[14:02:48] [INFO] src.dqn.trainer: ep=218 reward=-1292.100 loss=0.0085 q=-3.195 eps=0.256
+[14:02:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[14:02:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=219
+[14:03:36] [INFO] src.dqn.trainer: ep=219 reward=-1266.214 loss=0.0084 q=-3.142 eps=0.253
+[14:03:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[14:03:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=220
+[14:04:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:04:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:04:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:04:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:04:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:04:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:04:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:04:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:04:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:04:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:04:58] [INFO] src.dqn.trainer: ep=220 reward=-1384.238 loss=0.0085 q=-3.046 eps=0.249 | val_reward=-1314.604 val_CR=0.417 val_WT=7.409 val_DU=0.289
+[14:04:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[14:04:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=221
+[14:05:39] [INFO] src.dqn.trainer: ep=221 reward=-1297.106 loss=0.0087 q=-3.189 eps=0.246
+[14:05:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[14:05:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=222
+[14:06:23] [INFO] src.dqn.trainer: ep=222 reward=-1353.028 loss=0.0086 q=-3.115 eps=0.242
+[14:06:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[14:06:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=223
+[14:07:05] [INFO] src.dqn.trainer: ep=223 reward=-1351.588 loss=0.0086 q=-3.031 eps=0.239
+[14:07:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[14:07:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=224
+[14:07:47] [INFO] src.dqn.trainer: ep=224 reward=-1290.350 loss=0.0085 q=-3.177 eps=0.236
+[14:07:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[14:07:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=225
+[14:08:40] [INFO] src.dqn.trainer: ep=225 reward=-1304.916 loss=0.0082 q=-3.263 eps=0.232
+[14:08:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[14:08:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=226
+[14:09:23] [INFO] src.dqn.trainer: ep=226 reward=-1253.639 loss=0.0083 q=-3.028 eps=0.229
+[14:09:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:09:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=227
+[14:10:09] [INFO] src.dqn.trainer: ep=227 reward=-1337.546 loss=0.0085 q=-3.138 eps=0.225
+[14:10:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[14:10:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=228
+[14:10:54] [INFO] src.dqn.trainer: ep=228 reward=-1310.803 loss=0.0083 q=-3.231 eps=0.222
+[14:10:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[14:10:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=229
+[14:11:44] [INFO] src.dqn.trainer: ep=229 reward=-1360.280 loss=0.0082 q=-3.145 eps=0.218
+[14:11:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 77)
+[14:11:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=230
+[14:12:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:12:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:12:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:12:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:12:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:12:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:12:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:12:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:13:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:13:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:13:07] [INFO] src.dqn.trainer: ep=230 reward=-1297.863 loss=0.0083 q=-3.200 eps=0.215 | val_reward=-1306.813 val_CR=0.406 val_WT=7.431 val_DU=0.284
+[14:13:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[14:13:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=231
+[14:13:57] [INFO] src.dqn.trainer: ep=231 reward=-1416.095 loss=0.0081 q=-3.017 eps=0.212
+[14:13:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[14:13:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=232
+[14:14:45] [INFO] src.dqn.trainer: ep=232 reward=-1276.555 loss=0.0082 q=-3.232 eps=0.208
+[14:14:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:14:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=233
+[14:15:33] [INFO] src.dqn.trainer: ep=233 reward=-1343.696 loss=0.0084 q=-3.049 eps=0.205
+[14:15:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[14:15:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=234
+[14:16:21] [INFO] src.dqn.trainer: ep=234 reward=-1282.170 loss=0.0080 q=-3.187 eps=0.201
+[14:16:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[14:16:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=235
+[14:17:10] [INFO] src.dqn.trainer: ep=235 reward=-1320.432 loss=0.0083 q=-3.018 eps=0.198
+[14:17:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[14:17:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=236
+[14:18:01] [INFO] src.dqn.trainer: ep=236 reward=-1323.570 loss=0.0085 q=-3.178 eps=0.195
+[14:18:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[14:18:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=237
+[14:18:50] [INFO] src.dqn.trainer: ep=237 reward=-1282.771 loss=0.0083 q=-3.220 eps=0.191
+[14:18:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[14:18:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=238
+[14:19:39] [INFO] src.dqn.trainer: ep=238 reward=-1266.161 loss=0.0080 q=-3.323 eps=0.188
+[14:19:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[14:19:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=239
+[14:20:31] [INFO] src.dqn.trainer: ep=239 reward=-1342.443 loss=0.0082 q=-3.339 eps=0.184
+[14:20:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[14:20:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=240
+[14:21:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:21:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:21:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:21:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:21:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:21:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:21:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:21:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:21:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:21:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:21:54] [INFO] src.dqn.trainer: ep=240 reward=-1254.875 loss=0.0080 q=-3.334 eps=0.181 | val_reward=-1285.567 val_CR=0.408 val_WT=7.396 val_DU=0.283
+[14:21:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[14:21:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=241
+[14:22:45] [INFO] src.dqn.trainer: ep=241 reward=-1248.135 loss=0.0076 q=-3.331 eps=0.178
+[14:22:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:22:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=242
+[14:23:33] [INFO] src.dqn.trainer: ep=242 reward=-1269.757 loss=0.0077 q=-3.189 eps=0.174
+[14:23:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[14:23:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=243
+[14:24:23] [INFO] src.dqn.trainer: ep=243 reward=-1304.993 loss=0.0080 q=-3.325 eps=0.171
+[14:24:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[14:24:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=244
+[14:25:10] [INFO] src.dqn.trainer: ep=244 reward=-1359.051 loss=0.0082 q=-3.083 eps=0.167
+[14:25:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:25:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=245
+[14:26:00] [INFO] src.dqn.trainer: ep=245 reward=-1321.775 loss=0.0085 q=-3.163 eps=0.164
+[14:26:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[14:26:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=246
+[14:26:48] [INFO] src.dqn.trainer: ep=246 reward=-1313.834 loss=0.0081 q=-3.346 eps=0.160
+[14:26:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[14:26:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=247
+[14:27:36] [INFO] src.dqn.trainer: ep=247 reward=-1307.590 loss=0.0082 q=-3.248 eps=0.157
+[14:27:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 103)
+[14:27:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=248
+[14:28:23] [INFO] src.dqn.trainer: ep=248 reward=-1269.335 loss=0.0080 q=-3.272 eps=0.154
+[14:28:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[14:28:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=249
+[14:29:08] [INFO] src.dqn.trainer: ep=249 reward=-1286.474 loss=0.0081 q=-3.223 eps=0.150
+[14:29:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:29:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=250
+[14:30:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:30:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:30:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:30:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:30:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:30:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:30:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:30:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:30:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:30:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:30:32] [INFO] src.dqn.trainer: ep=250 reward=-1435.993 loss=0.0083 q=-3.208 eps=0.147 | val_reward=-1269.944 val_CR=0.409 val_WT=7.348 val_DU=0.283
+[14:30:32] [INFO] src.dqn.trainer:   ↑ new best val_reward=-1269.944 → saved /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_best.pt
+[14:30:32] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep250.pt
+[14:30:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:30:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=251
+[14:31:21] [INFO] src.dqn.trainer: ep=251 reward=-1238.879 loss=0.0081 q=-3.370 eps=0.143
+[14:31:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:31:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=252
+[14:32:10] [INFO] src.dqn.trainer: ep=252 reward=-1308.114 loss=0.0079 q=-3.299 eps=0.140
+[14:32:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[14:32:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=253
+[14:33:02] [INFO] src.dqn.trainer: ep=253 reward=-1311.210 loss=0.0082 q=-3.227 eps=0.137
+[14:33:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[14:33:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=254
+[14:33:51] [INFO] src.dqn.trainer: ep=254 reward=-1221.358 loss=0.0084 q=-3.359 eps=0.133
+[14:33:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[14:33:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=255
+[14:34:43] [INFO] src.dqn.trainer: ep=255 reward=-1288.288 loss=0.0081 q=-3.314 eps=0.130
+[14:34:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[14:34:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=256
+[14:35:36] [INFO] src.dqn.trainer: ep=256 reward=-1335.070 loss=0.0083 q=-3.233 eps=0.126
+[14:35:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[14:35:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=257
+[14:36:25] [INFO] src.dqn.trainer: ep=257 reward=-1322.999 loss=0.0087 q=-3.298 eps=0.123
+[14:36:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:36:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=258
+[14:37:12] [INFO] src.dqn.trainer: ep=258 reward=-1262.244 loss=0.0084 q=-3.390 eps=0.119
+[14:37:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[14:37:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=259
+[14:38:05] [INFO] src.dqn.trainer: ep=259 reward=-1293.237 loss=0.0080 q=-3.369 eps=0.116
+[14:38:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[14:38:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=260
+[14:38:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:38:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:39:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:39:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:39:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:39:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:39:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:39:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:39:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:39:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:39:32] [INFO] src.dqn.trainer: ep=260 reward=-1329.224 loss=0.0082 q=-3.427 eps=0.113 | val_reward=-1275.535 val_CR=0.401 val_WT=7.310 val_DU=0.281
+[14:39:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[14:39:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=261
+[14:40:24] [INFO] src.dqn.trainer: ep=261 reward=-1338.560 loss=0.0081 q=-3.294 eps=0.109
+[14:40:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[14:40:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=262
+[14:41:11] [INFO] src.dqn.trainer: ep=262 reward=-1240.473 loss=0.0077 q=-3.340 eps=0.106
+[14:41:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[14:41:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=263
+[14:42:01] [INFO] src.dqn.trainer: ep=263 reward=-1318.088 loss=0.0078 q=-3.265 eps=0.102
+[14:42:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[14:42:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=264
+[14:42:49] [INFO] src.dqn.trainer: ep=264 reward=-1314.466 loss=0.0080 q=-3.319 eps=0.099
+[14:42:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:42:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=265
+[14:43:42] [INFO] src.dqn.trainer: ep=265 reward=-1292.465 loss=0.0078 q=-3.422 eps=0.096
+[14:43:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[14:43:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=266
+[14:44:34] [INFO] src.dqn.trainer: ep=266 reward=-1314.865 loss=0.0075 q=-3.362 eps=0.092
+[14:44:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[14:44:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=267
+[14:45:33] [INFO] src.dqn.trainer: ep=267 reward=-1340.994 loss=0.0077 q=-3.343 eps=0.089
+[14:45:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[14:45:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=268
+[14:46:34] [INFO] src.dqn.trainer: ep=268 reward=-1377.301 loss=0.0076 q=-3.312 eps=0.085
+[14:46:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[14:46:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=269
+[14:47:30] [INFO] src.dqn.trainer: ep=269 reward=-1259.073 loss=0.0075 q=-3.337 eps=0.082
+[14:47:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:47:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=270
+[14:48:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:48:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:48:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:48:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:48:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:48:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:48:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:48:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:48:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:48:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:48:55] [INFO] src.dqn.trainer: ep=270 reward=-1343.425 loss=0.0074 q=-3.354 eps=0.079 | val_reward=-1281.149 val_CR=0.414 val_WT=7.311 val_DU=0.282
+[14:48:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[14:48:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=271
+[14:49:48] [INFO] src.dqn.trainer: ep=271 reward=-1281.873 loss=0.0077 q=-3.325 eps=0.075
+[14:49:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[14:49:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=272
+[14:50:37] [INFO] src.dqn.trainer: ep=272 reward=-1302.796 loss=0.0076 q=-3.361 eps=0.072
+[14:50:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[14:50:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=273
+[14:51:29] [INFO] src.dqn.trainer: ep=273 reward=-1239.539 loss=0.0073 q=-3.434 eps=0.068
+[14:51:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[14:51:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=274
+[14:52:22] [INFO] src.dqn.trainer: ep=274 reward=-1292.537 loss=0.0074 q=-3.372 eps=0.065
+[14:52:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[14:52:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=275
+[14:53:13] [INFO] src.dqn.trainer: ep=275 reward=-1232.174 loss=0.0075 q=-3.442 eps=0.062
+[14:53:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[14:53:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=276
+[14:54:06] [INFO] src.dqn.trainer: ep=276 reward=-1339.735 loss=0.0072 q=-3.398 eps=0.058
+[14:54:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:54:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=277
+[14:54:59] [INFO] src.dqn.trainer: ep=277 reward=-1333.004 loss=0.0072 q=-3.427 eps=0.055
+[14:54:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[14:54:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=278
+[14:55:51] [INFO] src.dqn.trainer: ep=278 reward=-1279.040 loss=0.0074 q=-3.410 eps=0.051
+[14:55:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[14:55:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=279
+[14:56:42] [INFO] src.dqn.trainer: ep=279 reward=-1226.727 loss=0.0072 q=-3.455 eps=0.050
+[14:56:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:56:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=280
+[14:57:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[14:57:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[14:57:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[14:57:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[14:57:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[14:57:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[14:57:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[14:57:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[14:58:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[14:58:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[14:58:06] [INFO] src.dqn.trainer: ep=280 reward=-1247.547 loss=0.0070 q=-3.472 eps=0.050 | val_reward=-1283.654 val_CR=0.408 val_WT=7.317 val_DU=0.286
+[14:58:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[14:58:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=281
+[14:58:58] [INFO] src.dqn.trainer: ep=281 reward=-1318.305 loss=0.0072 q=-3.379 eps=0.050
+[14:58:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[14:58:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=282
+[14:59:53] [INFO] src.dqn.trainer: ep=282 reward=-1297.279 loss=0.0071 q=-3.493 eps=0.050
+[14:59:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[14:59:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=283
+[15:00:47] [INFO] src.dqn.trainer: ep=283 reward=-1310.675 loss=0.0071 q=-3.488 eps=0.050
+[15:00:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 115)
+[15:00:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=284
+[15:01:40] [INFO] src.dqn.trainer: ep=284 reward=-1296.589 loss=0.0070 q=-3.447 eps=0.050
+[15:01:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[15:01:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=285
+[15:02:37] [INFO] src.dqn.trainer: ep=285 reward=-1307.986 loss=0.0072 q=-3.526 eps=0.050
+[15:02:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[15:02:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=286
+[15:03:32] [INFO] src.dqn.trainer: ep=286 reward=-1277.079 loss=0.0072 q=-3.544 eps=0.050
+[15:03:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[15:03:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=287
+[15:04:25] [INFO] src.dqn.trainer: ep=287 reward=-1311.334 loss=0.0068 q=-3.523 eps=0.050
+[15:04:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[15:04:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=288
+[15:05:19] [INFO] src.dqn.trainer: ep=288 reward=-1320.250 loss=0.0070 q=-3.477 eps=0.050
+[15:05:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[15:05:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=289
+[15:06:14] [INFO] src.dqn.trainer: ep=289 reward=-1253.775 loss=0.0069 q=-3.529 eps=0.050
+[15:06:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[15:06:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=290
+[15:07:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[15:07:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[15:07:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[15:07:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[15:07:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[15:07:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[15:07:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[15:07:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[15:07:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[15:07:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[15:07:40] [INFO] src.dqn.trainer: ep=290 reward=-1292.568 loss=0.0070 q=-3.487 eps=0.050 | val_reward=-1281.696 val_CR=0.408 val_WT=7.314 val_DU=0.284
+[15:07:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[15:07:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=291
+[15:08:37] [INFO] src.dqn.trainer: ep=291 reward=-1361.626 loss=0.0066 q=-3.463 eps=0.050
+[15:08:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[15:08:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=292
+[15:09:27] [INFO] src.dqn.trainer: ep=292 reward=-1143.870 loss=0.0066 q=-3.575 eps=0.050
+[15:09:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[15:09:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=293
+[15:10:19] [INFO] src.dqn.trainer: ep=293 reward=-1210.247 loss=0.0065 q=-3.569 eps=0.050
+[15:10:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[15:10:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=294
+[15:11:12] [INFO] src.dqn.trainer: ep=294 reward=-1272.711 loss=0.0064 q=-3.465 eps=0.050
+[15:11:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[15:11:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=295
+[15:12:06] [INFO] src.dqn.trainer: ep=295 reward=-1286.837 loss=0.0068 q=-3.501 eps=0.050
+[15:12:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[15:12:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=296
+[15:13:00] [INFO] src.dqn.trainer: ep=296 reward=-1271.764 loss=0.0069 q=-3.525 eps=0.050
+[15:13:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[15:13:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=297
+[15:13:51] [INFO] src.dqn.trainer: ep=297 reward=-1271.016 loss=0.0071 q=-3.487 eps=0.050
+[15:13:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[15:13:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=298
+[15:14:44] [INFO] src.dqn.trainer: ep=298 reward=-1282.983 loss=0.0070 q=-3.548 eps=0.050
+[15:14:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[15:14:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=299
+[15:15:38] [INFO] src.dqn.trainer: ep=299 reward=-1379.185 loss=0.0072 q=-3.487 eps=0.050
+[15:15:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[15:15:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=300
+[15:16:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[15:16:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[15:16:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[15:16:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[15:16:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[15:16:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[15:16:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[15:16:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[15:16:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[15:16:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[15:17:05] [INFO] src.dqn.trainer: ep=300 reward=-1300.581 loss=0.0070 q=-3.577 eps=0.050 | val_reward=-1275.283 val_CR=0.407 val_WT=7.422 val_DU=0.281
+[15:17:05] [INFO] src.dqn.trainer:   checkpoint saved → /Users/mohammadrezanazif/Documents/dqn-abm-ride-hailing/experiments/models/dqn_ep300.pt
+[15:17:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[15:17:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=301
+[15:17:57] [INFO] src.dqn.trainer: ep=301 reward=-1211.060 loss=0.0067 q=-3.590 eps=0.050
+[15:17:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[15:17:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=302
+[15:18:52] [INFO] src.dqn.trainer: ep=302 reward=-1291.156 loss=0.0067 q=-3.507 eps=0.050
+[15:18:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[15:18:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=303
+[15:20:01] [INFO] src.dqn.trainer: ep=303 reward=-1295.103 loss=0.0069 q=-3.516 eps=0.050
+[15:20:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[15:20:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=304
+[15:20:57] [INFO] src.dqn.trainer: ep=304 reward=-1216.207 loss=0.0069 q=-3.630 eps=0.050
+[15:20:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[15:20:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=305
+[15:21:45] [INFO] src.dqn.trainer: ep=305 reward=-1237.015 loss=0.0068 q=-3.534 eps=0.050
+[15:21:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[15:21:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=306
+[15:22:37] [INFO] src.dqn.trainer: ep=306 reward=-1310.825 loss=0.0070 q=-3.617 eps=0.050
+[15:22:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[15:22:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=307
+[15:23:24] [INFO] src.dqn.trainer: ep=307 reward=-1234.736 loss=0.0070 q=-3.605 eps=0.050
+[15:23:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[15:23:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=308
+[15:24:13] [INFO] src.dqn.trainer: ep=308 reward=-1326.203 loss=0.0070 q=-3.576 eps=0.050
+[15:24:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[15:24:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=309
+[15:25:00] [INFO] src.dqn.trainer: ep=309 reward=-1216.470 loss=0.0067 q=-3.613 eps=0.050
+[15:25:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[15:25:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=310
+[15:25:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[15:25:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[15:25:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[15:25:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[15:26:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[15:26:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[15:26:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[15:26:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[15:26:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[15:26:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[15:26:25] [INFO] src.dqn.trainer: ep=310 reward=-1260.234 loss=0.0069 q=-3.619 eps=0.050 | val_reward=-1309.662 val_CR=0.413 val_WT=7.379 val_DU=0.293
+[15:26:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[15:26:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=311
+[15:27:13] [INFO] src.dqn.trainer: ep=311 reward=-1274.401 loss=0.0068 q=-3.617 eps=0.050
+[15:27:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[15:27:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=312
+[15:28:02] [INFO] src.dqn.trainer: ep=312 reward=-1278.196 loss=0.0065 q=-3.671 eps=0.050
+[15:28:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[15:28:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=313
+[15:28:50] [INFO] src.dqn.trainer: ep=313 reward=-1285.212 loss=0.0066 q=-3.625 eps=0.050
+[15:28:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[15:28:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=314
+[15:29:37] [INFO] src.dqn.trainer: ep=314 reward=-1268.671 loss=0.0069 q=-3.545 eps=0.050
+[15:29:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[15:29:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=315

@@ -55,9 +55,28 @@ class ExperienceReplay:
 
         self._ptr = 0
         self._size = 0
+        self._total_writes = 0  # شمارنده‌ی یکنوای write (برای overwrite-guard گزینه D)
 
     def __len__(self) -> int:
         return self._size
+
+    def get_size(self) -> int:
+        """تعداد گذارهای ذخیره‌شده‌ی فعلی."""
+        return self._size
+
+    @property
+    def size(self) -> int:
+        return self._size
+
+    @property
+    def next_index(self) -> int:
+        """اندیسی که push بعدی در آن نوشته خواهد شد (پیش‌بینی برای گزینه D)."""
+        return self._ptr
+
+    @property
+    def write_token(self) -> int:
+        """توکن یکنوای write فعلی (پیش از push بعدی)."""
+        return self._total_writes
 
     def push(
         self,
@@ -81,6 +100,31 @@ class ExperienceReplay:
 
         self._ptr = (self._ptr + 1) % self.capacity
         self._size = min(self._size + 1, self.capacity)
+        self._total_writes += 1
+
+    def add_to_reward(self, idx: int, delta: float, token: int) -> bool:
+        """
+        افزودن delta به پاداشِ گذارِ ذخیره‌شده در idx (پاداش تکمیل، گزینه D).
+
+        ورودی:
+            idx: اندیس گذار (= token % capacity هنگام ثبت)
+            delta: مقدار افزوده (completion_bonus)
+            token: write_token در لحظه‌ی ثبت اسلات (پیش از push آن گذار)
+
+        خروجی:
+            True اگر اعمال شد؛ False اگر delta=۰، هنوز push نشده،
+            یا اسلات به‌دلیل ring-buffer overwrite شده است (safety guard).
+        """
+        if delta == 0.0:
+            return False
+        # گذار هنوز push نشده (نباید رخ دهد در جریان عادی)
+        if token >= self._total_writes:
+            return False
+        # overwrite شده: از زمان ثبت، بیش از capacity بار write رخ داده
+        if (self._total_writes - token) > self.capacity:
+            return False
+        self._rewards[int(idx)] += float(delta)
+        return True
 
     def sample(self, batch_size: int) -> Dict[str, np.ndarray]:
         """نمونه‌گیری تصادفی یکنواخت یک دسته به‌صورت dict از آرایه‌های numpy."""

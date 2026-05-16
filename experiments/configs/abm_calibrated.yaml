@@ -13,7 +13,7 @@ dqn:
   - 256
   - 256
   - 128
-  learning_rate: 0.0005
+  learning_rate: 0.001
   batch_size: 64
   buffer_size: 100000
   warmup_steps: 5000
@@ -21,10 +21,17 @@ dqn:
   gamma: 0.95
   epsilon_start: 1.0
   epsilon_end: 0.05
-  epsilon_decay_steps: 200000
+  epsilon_decay_steps: 100000
   n_episodes: 1000
   early_stopping_patience: 50
 reward:
+  mode: "shaped"
+  wt_baseline: 2.5154
+  accept_bonus: 0.5
+  pickup_alpha: 0.3
+  drivers_beta: 0.1
+  reject_lambda: 0.3
+  completion_bonus: 2.0
   alpha: 0.6
   beta: 0.4
   lambda_reject: 0.2

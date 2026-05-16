@@ -103,17 +103,7 @@ def main() -> int:
     logger.info("Device: %s | n_episodes: %d | double_dqn: %s",
                 device, n_episodes, args.double_dqn)
 
-    # ساخت محیط
     from src.abm.gym_env import RideHailingEnv
-
-    env = RideHailingEnv(
-        config=config,
-        targets=targets,
-        zones_data=zones_data,
-        seed=args.seed,
-    )
-
-    # ساخت عامل و بافر
     from src.dqn.dqn_agent import DQNAgent
     from src.dqn.replay_buffer import ExperienceReplay
     from src.dqn.trainer import DQNTrainer
@@ -121,7 +111,27 @@ def main() -> int:
     state_dim = int(dqn_cfg.get("state_dim", 32))
     a_feat_dim = int(dqn_cfg.get("action_features_dim", 8))
     hidden_dims = tuple(dqn_cfg.get("hidden_dims", [256, 256, 128]))
-    k_max = int(getattr(env, "K_MAX", 50))
+    k_max = int(RideHailingEnv.K_MAX)
+
+    # بافر را اول می‌سازیم تا به env پاس داده شود (پاداش تکمیلِ retroactive، گزینه D)
+    buffer = ExperienceReplay(
+        capacity=int(dqn_cfg.get("buffer_size", 100_000)),
+        state_dim=state_dim,
+        action_features_dim=a_feat_dim,
+        k_max=k_max,
+        seed=args.seed,
+    )
+
+    # ساخت محیط با رفرنس buffer برای پاداش تکمیل
+    env = RideHailingEnv(
+        config=config,
+        targets=targets,
+        zones_data=zones_data,
+        seed=args.seed,
+        replay_buffer=buffer,
+    )
+    logger.info("Reward mode: %s | completion_bonus: %.2f",
+                env.reward_mode, env._completion_bonus)
 
     agent = DQNAgent(
         state_dim=state_dim,
@@ -132,14 +142,6 @@ def main() -> int:
         gamma=float(dqn_cfg.get("gamma", 0.95)),
         double_dqn=bool(args.double_dqn),
         device=device,
-        seed=args.seed,
-    )
-
-    buffer = ExperienceReplay(
-        capacity=int(dqn_cfg.get("buffer_size", 100_000)),
-        state_dim=state_dim,
-        action_features_dim=a_feat_dim,
-        k_max=k_max,
         seed=args.seed,
     )
 

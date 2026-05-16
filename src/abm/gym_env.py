@@ -98,6 +98,8 @@ class RideHailingEnv(gym.Env):
         zones_data: Dict[str, Any],
         seed: Optional[int] = None,
         render_mode: Optional[str] = None,
+        reward_mode: Optional[str] = None,
+        replay_buffer: Optional[Any] = None,
     ) -> None:
         super().__init__()
 
@@ -107,17 +109,22 @@ class RideHailingEnv(gym.Env):
         self._base_seed = seed
         self.render_mode = render_mode
 
-        # ضرایب پاداش از بخش reward در abm_calibrated.yaml (با fallback فصل ۳)
+        # محاسبه‌گر پاداش (mode از پارامتر یا config.reward.mode؛ پیش‌فرض shaped)
+        from src.abm.reward import RewardCalculator
+
         reward_cfg = dict(self._config.get("reward", {}))
-        self.alpha: float = float(reward_cfg.get("alpha", 0.6))
-        self.beta: float = float(reward_cfg.get("beta", 0.4))
-        self.lambda_reject: float = float(reward_cfg.get("lambda_reject", 0.2))
-        self.WT_baseline: float = float(
-            reward_cfg.get("WT_baseline", self._targets.get("WT_baseline", 2.5154))
-        )
-        self.DU_baseline: float = float(
-            reward_cfg.get("DU_baseline", self._targets.get("DU_baseline", 0.6364))
-        )
+        if "wt_baseline" not in reward_cfg and "WT_baseline" not in reward_cfg:
+            reward_cfg["wt_baseline"] = float(
+                self._targets.get("WT_baseline", 2.5154)
+            )
+        self._reward_calc = RewardCalculator(reward_cfg, mode=reward_mode)
+        self.reward_mode: str = self._reward_calc.mode
+        self.WT_baseline: float = self._reward_calc.wt_baseline
+
+        # رفرنس اختیاری replay buffer برای پاداش تکمیلِ retroactive (گزینه D).
+        # اگر None باشد (مثل smoke test محیط)، پاداش تکمیل غیرفعال است.
+        self._replay_buffer = replay_buffer
+        self._completion_bonus: float = self._reward_calc.completion_bonus()
 
         # افق زمانی اپیزود (T=۷۲۰ گام × ۲ دقیقه = ۲۴ ساعت)
         self.max_steps: int = int(self._config.get("max_steps", 720))
@@ -162,6 +169,12 @@ class RideHailingEnv(gym.Env):
         self._episode_reward: float = 0.0
         self._abm_step_count: int = 0
         self._terminated: bool = False
+
+        # --- ردیابی پاداش تکمیل (گزینه D §۳-۷-۲) ---
+        # passenger_id → (buffer_index, write_token) در لحظه‌ی تخصیصِ accepted
+        self._pid_to_slot: Dict[int, tuple] = {}
+        self._completed_pids: set = set()
+        self._n_completion_bonus: int = 0
 
     # ------------------------------------------------------------------
     # ساخت/مدیریت مدل ABM
@@ -225,6 +238,34 @@ class RideHailingEnv(gym.Env):
         """
         self._model.step()
         self._abm_step_count += 1
+        self._process_completions()
+
+    def _process_completions(self) -> None:
+        """
+        تشخیص passengerهای تازه COMPLETED و اعمال پاداش تکمیلِ retroactive
+        (گزینه D §۳-۷-۲): فقط COMPLETED واقعی (نه cancelled)، فقط اگر
+        replay_buffer متصل باشد و گذارِ تخصیص هنوز overwrite نشده باشد.
+        """
+        if self._completion_bonus == 0.0 or self._replay_buffer is None:
+            return
+        from src.abm.passenger_agent import PassengerStatus
+
+        for p in self._model.passengers:
+            if p.status != PassengerStatus.COMPLETED:
+                continue
+            pid = int(p.unique_id)
+            if pid in self._completed_pids:
+                continue
+            self._completed_pids.add(pid)
+            slot = self._pid_to_slot.pop(pid, None)
+            if slot is None:
+                continue
+            idx, token = slot
+            applied = self._replay_buffer.add_to_reward(
+                idx, self._completion_bonus, token
+            )
+            if applied:
+                self._n_completion_bonus += 1
 
     # ------------------------------------------------------------------
     # بردار حالت ۳۲ بُعدی (جدول ۳-۳)
@@ -428,27 +469,21 @@ class RideHailingEnv(gym.Env):
         }
 
     # ------------------------------------------------------------------
-    # پاداش جزئی (رابطه ۳-۸)
+    # پاداش فوری (از RewardCalculator — mode: partial یا shaped)
     # ------------------------------------------------------------------
 
-    def _partial_reward(
+    def _immediate_reward(
         self,
+        accepted: bool,
         pickup_eta_min: float,
         n_drivers_zone: int,
-        rejected: bool,
     ) -> float:
-        """
-        r_step = −α·(pickup_eta / WT_baseline)
-                 + β·(1 / N_drivers_zone)
-                 − λ·𝟙[reject]
-        """
-        n_zone = max(1, int(n_drivers_zone))
-        r = (
-            -self.alpha * (pickup_eta_min / max(self.WT_baseline, 1e-6))
-            + self.beta * (1.0 / n_zone)
-            - self.lambda_reject * (1.0 if rejected else 0.0)
+        """پاداش فوری تصمیم تخصیص (پاداش تکمیل جداگانه retroactive است)."""
+        return self._reward_calc.immediate(
+            accepted=accepted,
+            pickup_eta_min=pickup_eta_min,
+            n_drivers_zone=n_drivers_zone,
         )
-        return float(r)
 
     # ------------------------------------------------------------------
     # Gym API
@@ -471,6 +506,11 @@ class RideHailingEnv(gym.Env):
         self._build_model(episode_seed)
         self._episode_reward = 0.0
         self._terminated = False
+
+        # پاک‌سازی ردیابی پاداش تکمیل برای اپیزود تازه
+        self._pid_to_slot = {}
+        self._completed_pids = set()
+        self._n_completion_bonus = 0
 
         # گام اول: تولید درخواست‌های اولیه (بدون تخصیص چون dispatch=no-op)
         self._advance_abm_time()
@@ -562,19 +602,30 @@ class RideHailingEnv(gym.Env):
                 p.mark_assigned(d.driver_id)
                 p.pickup_eta_min = pickup_eta
                 self._dispatcher.total_assignments += 1
-                reward = self._partial_reward(
+                reward = self._immediate_reward(
+                    accepted=True,
                     pickup_eta_min=pickup_eta,
                     n_drivers_zone=n_avail_zone,
-                    rejected=False,
                 )
                 info["action_type"] = "assigned"
+
+                # ثبت اسلات برای پاداش تکمیلِ retroactive (گزینه D):
+                # اندیسی که push بعدیِ trainer این گذار را در آن می‌نویسد
+                if (
+                    self._replay_buffer is not None
+                    and self._completion_bonus != 0.0
+                ):
+                    self._pid_to_slot[int(p.unique_id)] = (
+                        self._replay_buffer.next_index,
+                        self._replay_buffer.write_token,
+                    )
             else:
                 p.mark_rejected()
                 self._dispatcher.total_rejections += 1
-                reward = self._partial_reward(
+                reward = self._immediate_reward(
+                    accepted=False,
                     pickup_eta_min=0.0,
                     n_drivers_zone=n_avail_zone,
-                    rejected=True,
                 )
                 info["action_type"] = "rejected"
 
@@ -610,10 +661,12 @@ class RideHailingEnv(gym.Env):
                 summary = {}
             info["episode_summary"] = summary
             info["episode_reward"] = self._episode_reward
+            info["n_completion_bonus"] = self._n_completion_bonus
 
         obs = self._build_observation()
         info["abm_step"] = self._abm_step_count
         info["n_candidates"] = len(self._candidates)
+        info["n_completion_bonus"] = self._n_completion_bonus
         return obs, reward, terminated, truncated, info
 
     def render(self) -> None:
