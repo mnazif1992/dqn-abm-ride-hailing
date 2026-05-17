@@ -169,6 +169,7 @@ class RideHailingEnv(gym.Env):
         self._episode_reward: float = 0.0
         self._abm_step_count: int = 0
         self._terminated: bool = False
+        self._driver_by_id: Dict[int, Any] = {}
 
         # --- ردیابی پاداش تکمیل (گزینه D §۳-۷-۲) ---
         # passenger_id → (buffer_index, write_token) در لحظه‌ی تخصیصِ accepted
@@ -210,6 +211,84 @@ class RideHailingEnv(gym.Env):
         )
         self._dispatcher = self._model.dispatcher
         self._abm_step_count = 0
+        # نگاشت driver_id → DriverAgent (driver_id ≠ ایندکس لیست چون
+        # _gen_id سراسری است و dispatcher قبل از drivers id می‌گیرد)
+        self._driver_by_id = {
+            int(d.driver_id): d for d in self._model.drivers
+        }
+
+    # ------------------------------------------------------------------
+    # State per-driver برای V-network (DiDi-style، Tang et al. 2019)
+    # ------------------------------------------------------------------
+
+    DRIVER_STATE_DIM: int = 40  # 14 zone + 2 sin/cos + 24 hour one-hot
+
+    def get_driver_state(
+        self,
+        driver_id: int,
+        override_zone: Optional[int] = None,
+        override_time_step: Optional[int] = None,
+    ) -> np.ndarray:
+        """
+        بردار حالتِ per-driver (۴۰ بعدی) برای V-network.
+
+        ساختار:
+            [0:14]   one-hot ناحیه‌ی جاری راننده (از zone_lookup روی lat/lon)
+            [14]     sin(2π·hour/24)
+            [15]     cos(2π·hour/24)
+            [16:40]  one-hot سطل ساعت (۰..۲۳)
+
+        ورودی:
+            driver_id: شناسه‌ی واقعی DriverAgent.driver_id
+            override_zone: اگر داده شود، به‌جای ناحیه‌ی جاری (برای V(s_after)
+                هنگام اتمام سفر)
+            override_time_step: اگر داده شود، به‌جای گام جاری ABM (برای
+                s_after که زمان جلو می‌رود)
+
+        توجه (انحراف از pseudocode اولیه — مستندشده):
+            - DriverAgent صفت .zone ندارد؛ ناحیه از zone_lookup(lat,lon)
+              مشتق می‌شود.
+            - شمارنده‌ی گام = model.schedule.steps (نه current_step).
+            - lookup با driver_id واقعی (نه ایندکس لیست).
+        """
+        from src.abm.utils import zone_lookup
+
+        driver = self._driver_by_id.get(int(driver_id))
+        if driver is None:
+            raise KeyError(
+                f"driver_id {driver_id} یافت نشد "
+                f"(تعداد رانندگان: {len(self._driver_by_id)})"
+            )
+
+        if override_zone is not None:
+            zone = int(override_zone)
+        else:
+            zone = int(
+                zone_lookup(
+                    float(driver.lat), float(driver.lon),
+                    self._model.zone_lats, self._model.zone_lons,
+                )
+            )
+        if not (0 <= zone < self.n_zones):
+            raise ValueError(
+                f"zone {zone} خارج از بازه [0,{self.n_zones})"
+            )
+
+        if override_time_step is not None:
+            time_step = int(override_time_step)
+        else:
+            time_step = int(getattr(self._model.schedule, "steps",
+                                    self._abm_step_count))
+
+        step_minutes = float(getattr(self._model, "step_minutes", 2.0))
+        hour = int((time_step * step_minutes // 60) % 24)
+
+        state = np.zeros(self.DRIVER_STATE_DIM, dtype=np.float32)
+        state[zone] = 1.0
+        state[14] = np.sin(2.0 * np.pi * hour / 24.0)
+        state[15] = np.cos(2.0 * np.pi * hour / 24.0)
+        state[16 + hour] = 1.0
+        return state
 
     # ------------------------------------------------------------------
     # کاندیدها
@@ -629,12 +708,24 @@ class RideHailingEnv(gym.Env):
                 )
                 info["action_type"] = "rejected"
 
-            # حذف جفت‌های شامل این driver یا این passenger
-            self._candidates = [
-                c for c in self._candidates
-                if c.driver.driver_id != d.driver_id
-                and c.passenger.unique_id != p.unique_id
-            ]
+            # حذف کاندید:
+            # - accepted: همه‌ی جفت‌های شامل این driver یا passenger حذف
+            #   (driver assigned شد، passenger هم تخصیص یافت).
+            # - rejected: فقط همین جفت خاص (d,p) حذف؛ passenger در pool
+            #   می‌ماند و در همین گام با driver بعدی retry می‌شود
+            #   (همتقارن با greedy_baseline.py — رفع باگ بنیادی reject).
+            if accepted:
+                self._candidates = [
+                    c for c in self._candidates
+                    if c.driver.driver_id != d.driver_id
+                    and c.passenger.unique_id != p.unique_id
+                ]
+            else:
+                self._candidates = [
+                    c for c in self._candidates
+                    if not (c.driver.driver_id == d.driver_id
+                            and c.passenger.unique_id == p.unique_id)
+                ]
 
         # اگر کاندید تمام شد یا no-op شد → زمان ABM جلو می‌رود
         if is_noop or not self._candidates:
