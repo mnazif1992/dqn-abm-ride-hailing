@@ -28,7 +28,7 @@ reward:
   mode: "shaped"
   wt_baseline: 2.5154
   accept_bonus: 0.5
-  pickup_alpha: 0.3
+  pickup_alpha: 1.0  # v4 sharper reward (was 0.3) — see src/abm/reward.py
   drivers_beta: 0.1
   reject_lambda: 0.3
   completion_bonus: 2.0

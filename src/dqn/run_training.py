@@ -68,6 +68,16 @@ def parse_args() -> argparse.Namespace:
         "--double-dqn", action="store_true",
         help="استفاده از Double DQN (پیش‌فرض: DQN استاندارد)",
     )
+    p.add_argument(
+        "--pretrained-model", type=str, default=None,
+        help="مسیر مدل pretrained برای warm-start (مثل "
+             "experiments/models/dqn_v3_pretrained.pt)",
+    )
+    p.add_argument(
+        "--epsilon-start", type=float, default=None,
+        help="epsilon اولیه (پیش‌فرض: 1.0 برای cold start، "
+             "0.3 برای warm-start با --pretrained-model)",
+    )
     p.add_argument("--seed", type=int, default=0)
     p.add_argument(
         "--log-csv", type=str,
@@ -145,6 +155,37 @@ def main() -> int:
         seed=args.seed,
     )
 
+    # --- warm-start از مدل BC-pretrained (مرحله ۴ از v3) ---
+    if args.pretrained_model:
+        pretrained_path = root / args.pretrained_model
+        if not pretrained_path.exists():
+            raise FileNotFoundError(
+                f"Pretrained model not found: {pretrained_path}"
+            )
+        logger.info(
+            "Loading pretrained warm-start from %s", pretrained_path
+        )
+        agent.load(str(pretrained_path), map_location=device)
+        logger.info(
+            "✅ Warm-start loaded — DQN starts from BC-trained Greedy policy"
+        )
+        epsilon_start_value = (
+            float(args.epsilon_start)
+            if args.epsilon_start is not None
+            else 0.3  # شبکه چیزی می‌داند → اکتشاف کمتر از cold start
+        )
+    else:
+        epsilon_start_value = (
+            float(args.epsilon_start)
+            if args.epsilon_start is not None
+            else float(dqn_cfg.get("epsilon_start", 1.0))
+        )
+    logger.info(
+        "epsilon_start = %.3f (%s)",
+        epsilon_start_value,
+        "warm-start" if args.pretrained_model else "cold start",
+    )
+
     trainer = DQNTrainer(
         env=env,
         agent=agent,
@@ -152,7 +193,7 @@ def main() -> int:
         batch_size=int(dqn_cfg.get("batch_size", 64)),
         warmup_steps=int(dqn_cfg.get("warmup_steps", 5_000)),
         target_update_freq=int(dqn_cfg.get("target_update_freq", 1_000)),
-        epsilon_start=float(dqn_cfg.get("epsilon_start", 1.0)),
+        epsilon_start=epsilon_start_value,
         epsilon_end=float(dqn_cfg.get("epsilon_end", 0.05)),
         epsilon_decay_steps=int(dqn_cfg.get("epsilon_decay_steps", 200_000)),
         early_stopping_patience=int(

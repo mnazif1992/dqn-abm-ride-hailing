@@ -54,7 +54,12 @@ class RewardCalculator:
 
         # --- پارامترهای shaped (v2) ---
         self.accept_bonus: float = float(cfg.get("accept_bonus", 0.5))
-        self.pickup_alpha: float = float(cfg.get("pickup_alpha", 0.3))
+        # v4 (sharper reward, May 17): ضریب جریمه pickup از 0.3 به 1.0 افزایش یافت.
+        # تشخیص v2 نشان داد Q function flat می‌شود (margin<0.2) به علت سیگنال
+        # ضعیف candidate-level. این تغییر تفاوت reward بین کاندیدها را از ~0.36
+        # به ~1.20 افزایش می‌دهد (در reward کلی ~+2.5). این یک تست تشخیصی است
+        # برای اثبات اینکه ضعف candidate-level signal علت همگرایی به flat Q بود.
+        self.pickup_alpha: float = float(cfg.get("pickup_alpha", 1.0))
         self.drivers_beta: float = float(cfg.get("drivers_beta", 0.1))
         self.reject_lambda: float = float(cfg.get("reject_lambda", 0.3))
         self.completion_bonus_value: float = float(
