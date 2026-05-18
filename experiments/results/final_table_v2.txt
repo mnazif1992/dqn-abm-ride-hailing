@@ -1,0 +1,25 @@
+======================================================================
+Final Results Table v2 (Patched Env, symmetric CR-best, 10 seeds)
+======================================================================
+
+Method                       Mean CR      Std      Min      Max
+----------------------------------------------------------------------
+Greedy                        0.6099   0.0161   0.5846   0.6394
+DQN_CRbest_ep300              0.6250   0.0194   0.5884   0.6523
+V_net_ep109                   0.6259   0.0163   0.5976   0.6598
+
+Calibration target CR: 0.615
+Hungarian-resolve (ABM-direct ref): 0.624
+
+Checkpoint selection: BOTH methods use CR-best criterion.
+  DQN: ep300 (sweep over ep50/100/150/200/250/300/final)
+  V-net: ep109 (v_best.pt)
+
+Wilcoxon (paired, n=10):
+  DQN CR-best vs Greedy : p=0.0322  -> SIGNIFICANT (DQN > Greedy)
+  V-net       vs Greedy : p=0.0186  -> SIGNIFICANT (V-net > Greedy)
+  V-net       vs DQN    : p=0.4609 (one-sided) / p=0.9219 (two-sided)
+                          -> NOT significant (statistically tied)
+
+Conclusion: Both RL methods significantly outperform Greedy.
+No statistically significant difference between Q-net and V-net.
