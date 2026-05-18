@@ -1,0 +1,1264 @@
+[10:54:06] [INFO] __main__: === V-network training started ===
+[10:54:06] [INFO] __main__: Args: {'n_episodes': 300, 'eval_every': 10, 'save_every': 50, 'lr': 0.001, 'gamma': 0.95, 'alpha': 1.0, 'batch_size': 32, 'target_sync_freq': 5, 'log_dir': 'experiments/logs', 'model_dir': 'experiments/models', 'device': 'auto', 'seed_offset': 0}
+[10:54:06] [INFO] __main__: Device: mps
+[10:54:06] [INFO] src.abm.utils: loaded config from experiments/configs/abm_calibrated.yaml
+[10:54:06] [INFO] src.abm.utils: loaded targets from data/calibration/targets.json (n_records=104770)
+[10:54:06] [INFO] src.abm.utils: loaded 14 zones from data/calibration/zones.json
+[10:54:08] [INFO] src.abm.gym_env: gym_env: applied calibration overrides {'p_cancel_per_step': 0.5, 'patience_gamma_scale': 6.0, 'acceptance_beta_a': 7.0, 'acceptance_beta_b': 1.5, 'no_driver_threshold_steps': 2}
+[10:54:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[10:54:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=0
+[10:54:24] [INFO] __main__: ep=0 reward=-2433.7 loss=0.0535 v=-0.168 CR_train=0.578 wall=16.3s
+[10:54:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[10:54:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[10:54:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[10:54:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[10:54:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[10:54:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[10:55:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[10:55:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[10:55:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[10:55:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[10:55:40] [INFO] __main__:   EVAL ep=0: val_CR=0.6028 val_WT=5.445 val_DU=0.424
+[10:55:40] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_best.pt
+[10:55:40] [INFO] __main__:   * New best val_CR: 0.6028
+[10:55:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[10:55:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=1
+[10:55:56] [INFO] __main__: ep=1 reward=-2285.2 loss=0.0501 v=-0.156 CR_train=0.626 wall=15.7s
+[10:55:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[10:55:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=2
+[10:56:14] [INFO] __main__: ep=2 reward=-2202.1 loss=0.0462 v=-0.158 CR_train=0.592 wall=17.6s
+[10:56:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[10:56:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=3
+[10:56:30] [INFO] __main__: ep=3 reward=-2333.7 loss=0.0565 v=-0.166 CR_train=0.588 wall=15.8s
+[10:56:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 111)
+[10:56:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=4
+[10:56:45] [INFO] __main__: ep=4 reward=-2287.8 loss=0.0485 v=-0.158 CR_train=0.609 wall=15.5s
+[10:56:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[10:56:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=5
+[10:57:01] [INFO] __main__: ep=5 reward=-2416.5 loss=0.0473 v=-0.419 CR_train=0.632 wall=15.6s
+[10:57:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[10:57:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=6
+[10:57:17] [INFO] __main__: ep=6 reward=-2296.2 loss=0.0505 v=-0.425 CR_train=0.599 wall=16.4s
+[10:57:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[10:57:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=7
+[10:57:35] [INFO] __main__: ep=7 reward=-2541.5 loss=0.0428 v=-0.439 CR_train=0.632 wall=18.0s
+[10:57:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[10:57:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=8
+[10:57:50] [INFO] __main__: ep=8 reward=-2278.0 loss=0.0504 v=-0.431 CR_train=0.602 wall=15.1s
+[10:57:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[10:57:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=9
+[10:58:05] [INFO] __main__: ep=9 reward=-2265.6 loss=0.0519 v=-0.426 CR_train=0.624 wall=14.8s
+[10:58:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[10:58:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[10:58:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[10:58:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[10:58:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[10:58:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[10:58:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[10:58:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[10:59:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[10:59:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[10:59:19] [INFO] __main__:   EVAL ep=9: val_CR=0.6176 val_WT=5.449 val_DU=0.424
+[10:59:19] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_best.pt
+[10:59:19] [INFO] __main__:   * New best val_CR: 0.6176
+[10:59:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[10:59:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10
+[10:59:35] [INFO] __main__: ep=10 reward=-2456.2 loss=0.0525 v=-0.655 CR_train=0.596 wall=15.7s
+[10:59:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[10:59:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=11
+[10:59:49] [INFO] __main__: ep=11 reward=-2261.4 loss=0.0481 v=-0.654 CR_train=0.615 wall=14.8s
+[10:59:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[10:59:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=12
+[11:00:05] [INFO] __main__: ep=12 reward=-2449.2 loss=0.0556 v=-0.669 CR_train=0.566 wall=15.5s
+[11:00:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:00:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=13
+[11:00:21] [INFO] __main__: ep=13 reward=-2488.9 loss=0.0469 v=-0.658 CR_train=0.617 wall=16.5s
+[11:00:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:00:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=14
+[11:00:38] [INFO] __main__: ep=14 reward=-2325.3 loss=0.0457 v=-0.664 CR_train=0.610 wall=16.3s
+[11:00:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:00:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=15
+[11:00:54] [INFO] __main__: ep=15 reward=-2382.3 loss=0.0492 v=-0.812 CR_train=0.627 wall=16.1s
+[11:00:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:00:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=16
+[11:01:09] [INFO] __main__: ep=16 reward=-2350.7 loss=0.0538 v=-0.832 CR_train=0.593 wall=14.8s
+[11:01:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:01:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=17
+[11:01:23] [INFO] __main__: ep=17 reward=-2264.1 loss=0.0445 v=-0.834 CR_train=0.599 wall=14.3s
+[11:01:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:01:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=18
+[11:01:38] [INFO] __main__: ep=18 reward=-2348.9 loss=0.0480 v=-0.826 CR_train=0.585 wall=14.8s
+[11:01:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:01:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=19
+[11:01:53] [INFO] __main__: ep=19 reward=-2293.2 loss=0.0435 v=-0.831 CR_train=0.629 wall=15.0s
+[11:01:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:01:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:02:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:02:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:02:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:02:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:02:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:02:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:02:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:02:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:03:04] [INFO] __main__:   EVAL ep=19: val_CR=0.6010 val_WT=5.473 val_DU=0.425
+[11:03:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:03:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=20
+[11:03:19] [INFO] __main__: ep=20 reward=-2375.2 loss=0.0533 v=-0.955 CR_train=0.581 wall=15.1s
+[11:03:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:03:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=21
+[11:03:36] [INFO] __main__: ep=21 reward=-2542.9 loss=0.0462 v=-0.956 CR_train=0.626 wall=16.6s
+[11:03:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:03:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=22
+[11:03:52] [INFO] __main__: ep=22 reward=-2347.5 loss=0.0413 v=-0.942 CR_train=0.641 wall=15.8s
+[11:03:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:03:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=23
+[11:04:08] [INFO] __main__: ep=23 reward=-2378.9 loss=0.0455 v=-0.961 CR_train=0.627 wall=15.9s
+[11:04:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:04:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=24
+[11:04:23] [INFO] __main__: ep=24 reward=-2401.9 loss=0.0461 v=-0.958 CR_train=0.614 wall=15.3s
+[11:04:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:04:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=25
+[11:04:38] [INFO] __main__: ep=25 reward=-2330.6 loss=0.0437 v=-1.096 CR_train=0.623 wall=15.3s
+[11:04:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[11:04:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=26
+[11:04:53] [INFO] __main__: ep=26 reward=-2375.5 loss=0.0450 v=-1.121 CR_train=0.635 wall=15.0s
+[11:04:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:04:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=27
+[11:05:08] [INFO] __main__: ep=27 reward=-2198.8 loss=0.0470 v=-1.113 CR_train=0.631 wall=14.5s
+[11:05:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:05:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=28
+[11:05:23] [INFO] __main__: ep=28 reward=-2407.1 loss=0.0497 v=-1.118 CR_train=0.613 wall=15.1s
+[11:05:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:05:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=29
+[11:05:38] [INFO] __main__: ep=29 reward=-2461.1 loss=0.0537 v=-1.129 CR_train=0.616 wall=15.3s
+[11:05:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:05:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:05:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:05:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:06:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:06:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:06:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:06:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:06:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:06:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:06:49] [INFO] __main__:   EVAL ep=29: val_CR=0.6087 val_WT=5.515 val_DU=0.426
+[11:06:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:06:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=30
+[11:07:05] [INFO] __main__: ep=30 reward=-2405.0 loss=0.0493 v=-1.329 CR_train=0.595 wall=16.3s
+[11:07:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 103)
+[11:07:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=31
+[11:07:20] [INFO] __main__: ep=31 reward=-2340.3 loss=0.0459 v=-1.335 CR_train=0.604 wall=15.0s
+[11:07:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:07:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=32
+[11:07:36] [INFO] __main__: ep=32 reward=-2434.1 loss=0.0453 v=-1.333 CR_train=0.629 wall=15.8s
+[11:07:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:07:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=33
+[11:07:51] [INFO] __main__: ep=33 reward=-2320.4 loss=0.0427 v=-1.329 CR_train=0.616 wall=15.3s
+[11:07:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:07:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=34
+[11:08:07] [INFO] __main__: ep=34 reward=-2316.7 loss=0.0500 v=-1.338 CR_train=0.630 wall=15.1s
+[11:08:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:08:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=35
+[11:08:22] [INFO] __main__: ep=35 reward=-2365.3 loss=0.0458 v=-1.457 CR_train=0.617 wall=15.3s
+[11:08:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:08:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=36
+[11:08:38] [INFO] __main__: ep=36 reward=-2426.8 loss=0.0425 v=-1.473 CR_train=0.628 wall=16.1s
+[11:08:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:08:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=37
+[11:08:53] [INFO] __main__: ep=37 reward=-2259.7 loss=0.0427 v=-1.471 CR_train=0.631 wall=15.0s
+[11:08:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:08:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=38
+[11:09:09] [INFO] __main__: ep=38 reward=-2449.3 loss=0.0489 v=-1.482 CR_train=0.617 wall=15.8s
+[11:09:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:09:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=39
+[11:09:24] [INFO] __main__: ep=39 reward=-2328.7 loss=0.0452 v=-1.469 CR_train=0.622 wall=14.9s
+[11:09:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:09:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:09:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:09:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:09:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:09:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:10:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:10:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:10:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:10:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:10:34] [INFO] __main__:   EVAL ep=39: val_CR=0.5994 val_WT=5.507 val_DU=0.434
+[11:10:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:10:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=40
+[11:10:50] [INFO] __main__: ep=40 reward=-2377.0 loss=0.0480 v=-1.725 CR_train=0.646 wall=15.8s
+[11:10:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:10:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=41
+[11:11:05] [INFO] __main__: ep=41 reward=-2426.3 loss=0.0508 v=-1.733 CR_train=0.583 wall=15.2s
+[11:11:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:11:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=42
+[11:11:20] [INFO] __main__: ep=42 reward=-2335.9 loss=0.0578 v=-1.737 CR_train=0.607 wall=14.8s
+[11:11:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:11:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=43
+[11:11:35] [INFO] __main__: ep=43 reward=-2375.1 loss=0.0506 v=-1.718 CR_train=0.627 wall=15.5s
+[11:11:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:11:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=44
+[11:11:50] [INFO] __main__: ep=44 reward=-2342.8 loss=0.0550 v=-1.726 CR_train=0.612 wall=15.0s
+[11:11:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:11:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=45
+[11:12:06] [INFO] __main__: ep=45 reward=-2522.5 loss=0.0608 v=-1.840 CR_train=0.589 wall=15.5s
+[11:12:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 72)
+[11:12:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=46
+[11:12:21] [INFO] __main__: ep=46 reward=-2298.0 loss=0.0563 v=-1.824 CR_train=0.625 wall=15.1s
+[11:12:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:12:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=47
+[11:12:37] [INFO] __main__: ep=47 reward=-2546.7 loss=0.0545 v=-1.833 CR_train=0.611 wall=16.1s
+[11:12:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:12:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=48
+[11:12:52] [INFO] __main__: ep=48 reward=-2370.9 loss=0.0522 v=-1.825 CR_train=0.624 wall=15.3s
+[11:12:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:12:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=49
+[11:13:07] [INFO] __main__: ep=49 reward=-2329.1 loss=0.0543 v=-1.829 CR_train=0.610 wall=14.9s
+[11:13:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:13:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:13:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:13:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:13:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:13:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:13:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:13:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:14:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:14:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:14:19] [INFO] __main__:   EVAL ep=49: val_CR=0.6021 val_WT=5.467 val_DU=0.424
+[11:14:19] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep50.pt
+[11:14:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[11:14:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=50
+[11:14:35] [INFO] __main__: ep=50 reward=-2541.9 loss=0.0580 v=-1.954 CR_train=0.634 wall=16.3s
+[11:14:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 70)
+[11:14:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=51
+[11:14:50] [INFO] __main__: ep=51 reward=-2333.1 loss=0.0473 v=-1.950 CR_train=0.626 wall=15.1s
+[11:14:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:14:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=52
+[11:15:05] [INFO] __main__: ep=52 reward=-2431.2 loss=0.0524 v=-1.957 CR_train=0.585 wall=15.0s
+[11:15:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:15:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=53
+[11:15:20] [INFO] __main__: ep=53 reward=-2406.9 loss=0.0559 v=-1.963 CR_train=0.592 wall=14.9s
+[11:15:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:15:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=54
+[11:15:35] [INFO] __main__: ep=54 reward=-2341.2 loss=0.0552 v=-1.954 CR_train=0.625 wall=15.0s
+[11:15:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:15:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=55
+[11:15:50] [INFO] __main__: ep=55 reward=-2340.2 loss=0.0528 v=-2.100 CR_train=0.601 wall=14.5s
+[11:15:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 82)
+[11:15:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=56
+[11:16:06] [INFO] __main__: ep=56 reward=-2502.2 loss=0.0551 v=-2.121 CR_train=0.617 wall=15.9s
+[11:16:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 110)
+[11:16:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=57
+[11:16:20] [INFO] __main__: ep=57 reward=-2216.2 loss=0.0532 v=-2.093 CR_train=0.583 wall=14.3s
+[11:16:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:16:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=58
+[11:16:35] [INFO] __main__: ep=58 reward=-2324.4 loss=0.0555 v=-2.096 CR_train=0.633 wall=14.7s
+[11:16:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:16:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=59
+[11:16:50] [INFO] __main__: ep=59 reward=-2355.1 loss=0.0539 v=-2.112 CR_train=0.631 wall=15.3s
+[11:16:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:16:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:17:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:17:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:17:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:17:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:17:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:17:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:17:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:17:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:18:02] [INFO] __main__:   EVAL ep=59: val_CR=0.6194 val_WT=5.395 val_DU=0.415
+[11:18:02] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_best.pt
+[11:18:02] [INFO] __main__:   * New best val_CR: 0.6194
+[11:18:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:18:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=60
+[11:18:17] [INFO] __main__: ep=60 reward=-2367.2 loss=0.0521 v=-2.160 CR_train=0.617 wall=15.4s
+[11:18:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:18:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=61
+[11:18:32] [INFO] __main__: ep=61 reward=-2465.9 loss=0.0572 v=-2.179 CR_train=0.594 wall=15.1s
+[11:18:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:18:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=62
+[11:18:48] [INFO] __main__: ep=62 reward=-2563.8 loss=0.0506 v=-2.176 CR_train=0.625 wall=16.1s
+[11:18:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:18:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=63
+[11:19:04] [INFO] __main__: ep=63 reward=-2370.7 loss=0.0475 v=-2.166 CR_train=0.645 wall=15.5s
+[11:19:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:19:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=64
+[11:19:19] [INFO] __main__: ep=64 reward=-2398.9 loss=0.0585 v=-2.186 CR_train=0.600 wall=14.8s
+[11:19:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:19:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=65
+[11:19:33] [INFO] __main__: ep=65 reward=-2332.5 loss=0.0523 v=-2.277 CR_train=0.611 wall=14.8s
+[11:19:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:19:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=66
+[11:19:48] [INFO] __main__: ep=66 reward=-2290.5 loss=0.0474 v=-2.273 CR_train=0.597 wall=14.6s
+[11:19:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:19:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=67
+[11:20:03] [INFO] __main__: ep=67 reward=-2265.1 loss=0.0442 v=-2.264 CR_train=0.592 wall=14.5s
+[11:20:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[11:20:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=68
+[11:20:17] [INFO] __main__: ep=68 reward=-2329.7 loss=0.0507 v=-2.276 CR_train=0.589 wall=14.8s
+[11:20:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[11:20:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=69
+[11:20:32] [INFO] __main__: ep=69 reward=-2297.6 loss=0.0416 v=-2.276 CR_train=0.620 wall=14.8s
+[11:20:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:20:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:20:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:20:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:21:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:21:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:21:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:21:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:21:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:21:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:21:44] [INFO] __main__:   EVAL ep=69: val_CR=0.6129 val_WT=5.441 val_DU=0.415
+[11:21:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:21:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=70
+[11:21:59] [INFO] __main__: ep=70 reward=-2406.8 loss=0.0413 v=-2.385 CR_train=0.650 wall=15.6s
+[11:21:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:21:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=71
+[11:22:14] [INFO] __main__: ep=71 reward=-2147.7 loss=0.0480 v=-2.378 CR_train=0.604 wall=14.5s
+[11:22:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:22:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=72
+[11:22:28] [INFO] __main__: ep=72 reward=-2310.2 loss=0.0520 v=-2.403 CR_train=0.594 wall=14.7s
+[11:22:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:22:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=73
+[11:22:44] [INFO] __main__: ep=73 reward=-2360.7 loss=0.0439 v=-2.370 CR_train=0.639 wall=15.8s
+[11:22:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[11:22:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=74
+[11:23:00] [INFO] __main__: ep=74 reward=-2515.0 loss=0.0461 v=-2.402 CR_train=0.652 wall=16.3s
+[11:23:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:23:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=75
+[11:23:16] [INFO] __main__: ep=75 reward=-2347.0 loss=0.0447 v=-2.555 CR_train=0.617 wall=15.4s
+[11:23:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:23:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=76
+[11:23:31] [INFO] __main__: ep=76 reward=-2366.4 loss=0.0473 v=-2.556 CR_train=0.618 wall=15.0s
+[11:23:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:23:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=77
+[11:23:46] [INFO] __main__: ep=77 reward=-2281.6 loss=0.0427 v=-2.557 CR_train=0.620 wall=14.9s
+[11:23:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:23:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=78
+[11:24:01] [INFO] __main__: ep=78 reward=-2406.9 loss=0.0468 v=-2.574 CR_train=0.628 wall=15.3s
+[11:24:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:24:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=79
+[11:24:16] [INFO] __main__: ep=79 reward=-2253.8 loss=0.0466 v=-2.551 CR_train=0.638 wall=14.9s
+[11:24:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:24:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:24:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:24:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:24:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:24:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:24:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:24:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:25:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:25:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:25:28] [INFO] __main__:   EVAL ep=79: val_CR=0.6116 val_WT=5.381 val_DU=0.415
+[11:25:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:25:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=80
+[11:25:45] [INFO] __main__: ep=80 reward=-2458.9 loss=0.0442 v=-2.768 CR_train=0.616 wall=17.7s
+[11:25:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:25:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=81
+[11:26:00] [INFO] __main__: ep=81 reward=-2233.0 loss=0.0533 v=-2.757 CR_train=0.616 wall=15.0s
+[11:26:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[11:26:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=82
+[11:26:18] [INFO] __main__: ep=82 reward=-2530.4 loss=0.0503 v=-2.779 CR_train=0.622 wall=17.3s
+[11:26:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:26:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=83
+[11:26:35] [INFO] __main__: ep=83 reward=-2469.4 loss=0.0499 v=-2.752 CR_train=0.651 wall=17.4s
+[11:26:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:26:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=84
+[11:26:51] [INFO] __main__: ep=84 reward=-2453.0 loss=0.0651 v=-2.782 CR_train=0.603 wall=15.5s
+[11:26:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:26:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=85
+[11:27:07] [INFO] __main__: ep=85 reward=-2412.3 loss=0.0536 v=-2.817 CR_train=0.573 wall=16.3s
+[11:27:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:27:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=86
+[11:27:23] [INFO] __main__: ep=86 reward=-2540.9 loss=0.0596 v=-2.841 CR_train=0.617 wall=16.4s
+[11:27:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:27:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=87
+[11:27:44] [INFO] __main__: ep=87 reward=-2214.4 loss=0.0492 v=-2.833 CR_train=0.638 wall=20.4s
+[11:27:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:27:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=88
+[11:28:13] [INFO] __main__: ep=88 reward=-2460.8 loss=0.0523 v=-2.841 CR_train=0.638 wall=29.5s
+[11:28:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[11:28:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=89
+[11:28:41] [INFO] __main__: ep=89 reward=-2275.0 loss=0.0562 v=-2.822 CR_train=0.650 wall=27.2s
+[11:28:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:28:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:29:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:29:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:29:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:29:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:29:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:29:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:30:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:30:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:30:34] [INFO] __main__:   EVAL ep=89: val_CR=0.6172 val_WT=5.424 val_DU=0.423
+[11:30:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:30:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=90
+[11:30:50] [INFO] __main__: ep=90 reward=-2380.0 loss=0.0471 v=-2.866 CR_train=0.622 wall=15.6s
+[11:30:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:30:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=91
+[11:31:05] [INFO] __main__: ep=91 reward=-2392.6 loss=0.0514 v=-2.895 CR_train=0.603 wall=15.3s
+[11:31:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:31:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=92
+[11:31:19] [INFO] __main__: ep=92 reward=-2178.7 loss=0.0613 v=-2.873 CR_train=0.584 wall=13.8s
+[11:31:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:31:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=93
+[11:31:35] [INFO] __main__: ep=93 reward=-2404.5 loss=0.0517 v=-2.873 CR_train=0.615 wall=16.0s
+[11:31:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:31:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=94
+[11:31:50] [INFO] __main__: ep=94 reward=-2543.0 loss=0.0657 v=-2.901 CR_train=0.605 wall=15.6s
+[11:31:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:31:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=95
+[11:32:05] [INFO] __main__: ep=95 reward=-2301.8 loss=0.0490 v=-2.928 CR_train=0.605 wall=15.1s
+[11:32:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:32:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=96
+[11:32:21] [INFO] __main__: ep=96 reward=-2418.6 loss=0.0487 v=-2.918 CR_train=0.648 wall=15.8s
+[11:32:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:32:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=97
+[11:32:36] [INFO] __main__: ep=97 reward=-2425.1 loss=0.0511 v=-2.951 CR_train=0.604 wall=15.4s
+[11:32:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:32:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=98
+[11:32:52] [INFO] __main__: ep=98 reward=-2559.8 loss=0.0610 v=-2.949 CR_train=0.601 wall=15.8s
+[11:32:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:32:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=99
+[11:33:08] [INFO] __main__: ep=99 reward=-2361.5 loss=0.0507 v=-2.926 CR_train=0.621 wall=15.7s
+[11:33:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:33:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:33:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:33:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:33:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:33:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:33:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:33:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:34:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:34:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:34:19] [INFO] __main__:   EVAL ep=99: val_CR=0.6155 val_WT=5.388 val_DU=0.413
+[11:34:19] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep100.pt
+[11:34:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:34:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=100
+[11:34:34] [INFO] __main__: ep=100 reward=-2245.3 loss=0.0537 v=-3.053 CR_train=0.581 wall=14.6s
+[11:34:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:34:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=101
+[11:34:49] [INFO] __main__: ep=101 reward=-2463.3 loss=0.0618 v=-3.059 CR_train=0.603 wall=15.3s
+[11:34:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[11:34:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=102
+[11:35:05] [INFO] __main__: ep=102 reward=-2551.6 loss=0.0590 v=-3.047 CR_train=0.614 wall=16.4s
+[11:35:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 108)
+[11:35:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=103
+[11:35:19] [INFO] __main__: ep=103 reward=-2196.7 loss=0.0589 v=-3.031 CR_train=0.611 wall=14.1s
+[11:35:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[11:35:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=104
+[11:35:35] [INFO] __main__: ep=104 reward=-2264.5 loss=0.0595 v=-3.061 CR_train=0.599 wall=15.3s
+[11:35:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:35:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=105
+[11:35:52] [INFO] __main__: ep=105 reward=-2588.4 loss=0.0470 v=-3.162 CR_train=0.642 wall=17.6s
+[11:35:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[11:35:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=106
+[11:36:22] [INFO] __main__: ep=106 reward=-2547.7 loss=0.0484 v=-3.164 CR_train=0.618 wall=30.0s
+[11:36:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:36:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=107
+[11:36:48] [INFO] __main__: ep=107 reward=-2330.7 loss=0.0596 v=-3.168 CR_train=0.587 wall=26.1s
+[11:36:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:36:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=108
+[11:37:07] [INFO] __main__: ep=108 reward=-2303.3 loss=0.0559 v=-3.179 CR_train=0.604 wall=19.1s
+[11:37:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:37:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=109
+[11:37:22] [INFO] __main__: ep=109 reward=-2231.2 loss=0.0661 v=-3.187 CR_train=0.588 wall=14.4s
+[11:37:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:37:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:37:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:37:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:37:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:37:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:38:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:38:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:38:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:38:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:38:38] [INFO] __main__:   EVAL ep=109: val_CR=0.6217 val_WT=5.379 val_DU=0.413
+[11:38:38] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_best.pt
+[11:38:38] [INFO] __main__:   * New best val_CR: 0.6217
+[11:38:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:38:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=110
+[11:38:52] [INFO] __main__: ep=110 reward=-2127.8 loss=0.0470 v=-3.204 CR_train=0.620 wall=14.7s
+[11:38:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:38:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=111
+[11:39:09] [INFO] __main__: ep=111 reward=-2536.7 loss=0.0522 v=-3.225 CR_train=0.624 wall=16.3s
+[11:39:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:39:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=112
+[11:39:24] [INFO] __main__: ep=112 reward=-2343.2 loss=0.0552 v=-3.240 CR_train=0.631 wall=15.3s
+[11:39:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:39:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=113
+[11:39:40] [INFO] __main__: ep=113 reward=-2506.4 loss=0.0514 v=-3.237 CR_train=0.618 wall=15.6s
+[11:39:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:39:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=114
+[11:39:57] [INFO] __main__: ep=114 reward=-2408.4 loss=0.0491 v=-3.202 CR_train=0.649 wall=17.0s
+[11:39:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:39:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=115
+[11:40:13] [INFO] __main__: ep=115 reward=-2293.9 loss=0.0485 v=-3.373 CR_train=0.628 wall=15.8s
+[11:40:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:40:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=116
+[11:40:29] [INFO] __main__: ep=116 reward=-2385.5 loss=0.0497 v=-3.398 CR_train=0.617 wall=16.9s
+[11:40:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 103)
+[11:40:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=117
+[11:40:45] [INFO] __main__: ep=117 reward=-2359.1 loss=0.0474 v=-3.383 CR_train=0.629 wall=15.7s
+[11:40:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[11:40:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=118
+[11:41:01] [INFO] __main__: ep=118 reward=-2422.7 loss=0.0529 v=-3.414 CR_train=0.612 wall=15.6s
+[11:41:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:41:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=119
+[11:41:16] [INFO] __main__: ep=119 reward=-2323.2 loss=0.0552 v=-3.410 CR_train=0.617 wall=14.9s
+[11:41:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:41:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:41:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:41:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:41:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:41:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:41:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:41:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:42:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:42:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:42:26] [INFO] __main__:   EVAL ep=119: val_CR=0.6108 val_WT=5.444 val_DU=0.426
+[11:42:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:42:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=120
+[11:42:41] [INFO] __main__: ep=120 reward=-2384.8 loss=0.0508 v=-3.428 CR_train=0.606 wall=15.1s
+[11:42:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[11:42:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=121
+[11:42:55] [INFO] __main__: ep=121 reward=-2310.2 loss=0.0557 v=-3.440 CR_train=0.602 wall=14.2s
+[11:42:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:42:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=122
+[11:43:11] [INFO] __main__: ep=122 reward=-2503.5 loss=0.0508 v=-3.444 CR_train=0.638 wall=15.8s
+[11:43:11] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:43:11] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=123
+[11:43:26] [INFO] __main__: ep=123 reward=-2389.8 loss=0.0530 v=-3.450 CR_train=0.611 wall=14.7s
+[11:43:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:43:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=124
+[11:43:41] [INFO] __main__: ep=124 reward=-2230.5 loss=0.0495 v=-3.455 CR_train=0.621 wall=14.6s
+[11:43:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:43:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=125
+[11:43:55] [INFO] __main__: ep=125 reward=-2256.3 loss=0.0504 v=-3.432 CR_train=0.600 wall=14.0s
+[11:43:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:43:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=126
+[11:44:10] [INFO] __main__: ep=126 reward=-2417.1 loss=0.0460 v=-3.416 CR_train=0.632 wall=15.7s
+[11:44:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:44:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=127
+[11:44:25] [INFO] __main__: ep=127 reward=-2475.6 loss=0.0517 v=-3.440 CR_train=0.635 wall=15.1s
+[11:44:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:44:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=128
+[11:44:40] [INFO] __main__: ep=128 reward=-2299.4 loss=0.0455 v=-3.421 CR_train=0.643 wall=14.9s
+[11:44:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:44:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=129
+[11:44:55] [INFO] __main__: ep=129 reward=-2379.6 loss=0.0552 v=-3.427 CR_train=0.594 wall=14.8s
+[11:44:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:44:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:45:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:45:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:45:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:45:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:45:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:45:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:45:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:45:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:46:07] [INFO] __main__:   EVAL ep=129: val_CR=0.6051 val_WT=5.431 val_DU=0.418
+[11:46:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:46:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=130
+[11:46:21] [INFO] __main__: ep=130 reward=-2375.7 loss=0.0558 v=-3.578 CR_train=0.572 wall=14.4s
+[11:46:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:46:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=131
+[11:46:35] [INFO] __main__: ep=131 reward=-2299.0 loss=0.0536 v=-3.586 CR_train=0.611 wall=14.5s
+[11:46:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:46:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=132
+[11:46:51] [INFO] __main__: ep=132 reward=-2367.2 loss=0.0537 v=-3.560 CR_train=0.609 wall=15.1s
+[11:46:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:46:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=133
+[11:47:06] [INFO] __main__: ep=133 reward=-2305.7 loss=0.0730 v=-3.560 CR_train=0.667 wall=15.5s
+[11:47:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:47:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=134
+[11:47:23] [INFO] __main__: ep=134 reward=-2443.1 loss=0.0513 v=-3.566 CR_train=0.635 wall=16.4s
+[11:47:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[11:47:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=135
+[11:47:38] [INFO] __main__: ep=135 reward=-2323.7 loss=0.0515 v=-3.544 CR_train=0.624 wall=15.1s
+[11:47:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[11:47:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=136
+[11:47:53] [INFO] __main__: ep=136 reward=-2484.0 loss=0.0594 v=-3.570 CR_train=0.591 wall=15.2s
+[11:47:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[11:47:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=137
+[11:48:08] [INFO] __main__: ep=137 reward=-2312.6 loss=0.0499 v=-3.540 CR_train=0.610 wall=14.7s
+[11:48:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 110)
+[11:48:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=138
+[11:48:22] [INFO] __main__: ep=138 reward=-2322.5 loss=0.0464 v=-3.544 CR_train=0.615 wall=14.8s
+[11:48:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:48:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=139
+[11:48:37] [INFO] __main__: ep=139 reward=-2266.4 loss=0.0563 v=-3.554 CR_train=0.583 wall=14.8s
+[11:48:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:48:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:48:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:48:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:49:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:49:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:49:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:49:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:49:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:49:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:49:50] [INFO] __main__:   EVAL ep=139: val_CR=0.6106 val_WT=5.469 val_DU=0.422
+[11:49:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:49:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=140
+[11:50:06] [INFO] __main__: ep=140 reward=-2218.6 loss=0.0428 v=-3.564 CR_train=0.602 wall=15.1s
+[11:50:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:50:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=141
+[11:50:22] [INFO] __main__: ep=141 reward=-2511.5 loss=0.0543 v=-3.550 CR_train=0.633 wall=16.3s
+[11:50:22] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[11:50:22] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=142
+[11:50:38] [INFO] __main__: ep=142 reward=-2513.9 loss=0.0508 v=-3.578 CR_train=0.612 wall=15.9s
+[11:50:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:50:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=143
+[11:50:53] [INFO] __main__: ep=143 reward=-2372.6 loss=0.0592 v=-3.544 CR_train=0.622 wall=15.3s
+[11:50:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:50:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=144
+[11:51:08] [INFO] __main__: ep=144 reward=-2380.0 loss=0.0531 v=-3.565 CR_train=0.587 wall=14.9s
+[11:51:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:51:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=145
+[11:51:25] [INFO] __main__: ep=145 reward=-2419.5 loss=0.0592 v=-3.634 CR_train=0.612 wall=17.1s
+[11:51:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:51:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=146
+[11:51:42] [INFO] __main__: ep=146 reward=-2453.4 loss=0.0519 v=-3.620 CR_train=0.614 wall=17.1s
+[11:51:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[11:51:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=147
+[11:51:58] [INFO] __main__: ep=147 reward=-2276.6 loss=0.0467 v=-3.621 CR_train=0.622 wall=15.6s
+[11:51:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:51:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=148
+[11:52:15] [INFO] __main__: ep=148 reward=-2370.3 loss=0.0504 v=-3.632 CR_train=0.629 wall=16.7s
+[11:52:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[11:52:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=149
+[11:52:30] [INFO] __main__: ep=149 reward=-2281.7 loss=0.0651 v=-3.646 CR_train=0.609 wall=15.5s
+[11:52:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:52:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:52:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:52:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:53:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:53:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:53:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:53:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:53:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:53:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:53:42] [INFO] __main__:   EVAL ep=149: val_CR=0.6010 val_WT=5.488 val_DU=0.424
+[11:53:42] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep150.pt
+[11:53:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[11:53:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=150
+[11:53:56] [INFO] __main__: ep=150 reward=-2223.3 loss=0.0550 v=-3.689 CR_train=0.604 wall=14.4s
+[11:53:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[11:53:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=151
+[11:54:12] [INFO] __main__: ep=151 reward=-2473.8 loss=0.0599 v=-3.693 CR_train=0.633 wall=15.9s
+[11:54:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:54:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=152
+[11:54:33] [INFO] __main__: ep=152 reward=-2350.7 loss=0.0476 v=-3.720 CR_train=0.601 wall=20.4s
+[11:54:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[11:54:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=153
+[11:54:59] [INFO] __main__: ep=153 reward=-2360.0 loss=0.0513 v=-3.698 CR_train=0.623 wall=26.4s
+[11:54:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:54:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=154
+[11:55:23] [INFO] __main__: ep=154 reward=-2199.6 loss=0.0437 v=-3.693 CR_train=0.664 wall=24.4s
+[11:55:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:55:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=155
+[11:55:53] [INFO] __main__: ep=155 reward=-2426.1 loss=0.0474 v=-3.705 CR_train=0.615 wall=29.6s
+[11:55:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[11:55:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=156
+[11:56:23] [INFO] __main__: ep=156 reward=-2264.6 loss=0.0482 v=-3.713 CR_train=0.605 wall=30.3s
+[11:56:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[11:56:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=157
+[11:56:45] [INFO] __main__: ep=157 reward=-2450.8 loss=0.0447 v=-3.715 CR_train=0.609 wall=21.4s
+[11:56:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 108)
+[11:56:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=158
+[11:57:00] [INFO] __main__: ep=158 reward=-2310.7 loss=0.0536 v=-3.701 CR_train=0.615 wall=15.5s
+[11:57:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 101)
+[11:57:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=159
+[11:57:15] [INFO] __main__: ep=159 reward=-2333.1 loss=0.0508 v=-3.713 CR_train=0.592 wall=15.0s
+[11:57:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[11:57:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[11:57:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:57:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[11:57:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[11:57:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[11:57:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[11:57:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[11:58:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[11:58:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[11:58:27] [INFO] __main__:   EVAL ep=159: val_CR=0.6167 val_WT=5.403 val_DU=0.423
+[11:58:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[11:58:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=160
+[11:58:42] [INFO] __main__: ep=160 reward=-2251.5 loss=0.0434 v=-3.770 CR_train=0.662 wall=15.5s
+[11:58:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[11:58:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=161
+[11:59:03] [INFO] __main__: ep=161 reward=-2357.7 loss=0.0504 v=-3.758 CR_train=0.621 wall=20.1s
+[11:59:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[11:59:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=162
+[11:59:19] [INFO] __main__: ep=162 reward=-2394.6 loss=0.0476 v=-3.758 CR_train=0.633 wall=16.3s
+[11:59:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:59:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=163
+[11:59:36] [INFO] __main__: ep=163 reward=-2408.1 loss=0.0677 v=-3.762 CR_train=0.635 wall=16.8s
+[11:59:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[11:59:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=164
+[11:59:52] [INFO] __main__: ep=164 reward=-2387.8 loss=0.0503 v=-3.777 CR_train=0.644 wall=15.8s
+[11:59:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[11:59:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=165
+[12:00:08] [INFO] __main__: ep=165 reward=-2413.4 loss=0.0614 v=-3.795 CR_train=0.622 wall=16.8s
+[12:00:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:00:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=166
+[12:00:27] [INFO] __main__: ep=166 reward=-2406.2 loss=0.0511 v=-3.811 CR_train=0.583 wall=18.4s
+[12:00:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:00:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=167
+[12:00:44] [INFO] __main__: ep=167 reward=-2240.0 loss=0.0561 v=-3.808 CR_train=0.616 wall=17.8s
+[12:00:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:00:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=168
+[12:01:02] [INFO] __main__: ep=168 reward=-2491.0 loss=0.0578 v=-3.806 CR_train=0.596 wall=18.0s
+[12:01:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[12:01:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=169
+[12:01:26] [INFO] __main__: ep=169 reward=-2473.7 loss=0.0454 v=-3.788 CR_train=0.646 wall=23.8s
+[12:01:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:01:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:01:47] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:01:47] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:02:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:02:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:02:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:02:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:02:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:02:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:02:43] [INFO] __main__:   EVAL ep=169: val_CR=0.6064 val_WT=5.439 val_DU=0.420
+[12:02:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[12:02:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=170
+[12:02:59] [INFO] __main__: ep=170 reward=-2668.4 loss=0.0465 v=-3.946 CR_train=0.603 wall=16.3s
+[12:02:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:02:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=171
+[12:03:15] [INFO] __main__: ep=171 reward=-2486.7 loss=0.0559 v=-3.931 CR_train=0.619 wall=15.5s
+[12:03:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:03:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=172
+[12:03:31] [INFO] __main__: ep=172 reward=-2469.0 loss=0.0470 v=-3.902 CR_train=0.643 wall=16.2s
+[12:03:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:03:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=173
+[12:03:46] [INFO] __main__: ep=173 reward=-2211.9 loss=0.0451 v=-3.900 CR_train=0.619 wall=14.8s
+[12:03:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:03:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=174
+[12:04:01] [INFO] __main__: ep=174 reward=-2428.9 loss=0.0544 v=-3.920 CR_train=0.623 wall=15.3s
+[12:04:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:04:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=175
+[12:04:16] [INFO] __main__: ep=175 reward=-2235.3 loss=0.0478 v=-3.920 CR_train=0.606 wall=14.6s
+[12:04:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:04:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=176
+[12:04:30] [INFO] __main__: ep=176 reward=-2417.7 loss=0.0477 v=-3.939 CR_train=0.583 wall=14.8s
+[12:04:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:04:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=177
+[12:04:46] [INFO] __main__: ep=177 reward=-2482.8 loss=0.0639 v=-3.944 CR_train=0.621 wall=15.6s
+[12:04:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:04:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=178
+[12:05:02] [INFO] __main__: ep=178 reward=-2509.5 loss=0.0550 v=-3.956 CR_train=0.624 wall=15.7s
+[12:05:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[12:05:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=179
+[12:05:18] [INFO] __main__: ep=179 reward=-2498.0 loss=0.0504 v=-3.936 CR_train=0.625 wall=16.0s
+[12:05:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:05:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:05:32] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:05:32] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:05:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:05:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:06:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:06:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:06:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:06:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:06:33] [INFO] __main__:   EVAL ep=179: val_CR=0.6195 val_WT=5.454 val_DU=0.417
+[12:06:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:06:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=180
+[12:06:49] [INFO] __main__: ep=180 reward=-2437.8 loss=0.0437 v=-3.962 CR_train=0.647 wall=16.0s
+[12:06:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:06:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=181
+[12:07:05] [INFO] __main__: ep=181 reward=-2464.5 loss=0.0492 v=-3.984 CR_train=0.610 wall=16.0s
+[12:07:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:07:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=182
+[12:07:21] [INFO] __main__: ep=182 reward=-2372.0 loss=0.0565 v=-3.982 CR_train=0.637 wall=16.3s
+[12:07:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:07:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=183
+[12:07:36] [INFO] __main__: ep=183 reward=-2258.1 loss=0.0496 v=-3.967 CR_train=0.637 wall=15.1s
+[12:07:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:07:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=184
+[12:07:52] [INFO] __main__: ep=184 reward=-2459.4 loss=0.0566 v=-3.982 CR_train=0.600 wall=15.7s
+[12:07:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:07:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=185
+[12:08:06] [INFO] __main__: ep=185 reward=-2320.1 loss=0.0514 v=-4.053 CR_train=0.594 wall=14.7s
+[12:08:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:08:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=186
+[12:08:23] [INFO] __main__: ep=186 reward=-2425.9 loss=0.0455 v=-4.046 CR_train=0.653 wall=16.1s
+[12:08:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:08:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=187
+[12:08:38] [INFO] __main__: ep=187 reward=-2278.4 loss=0.0458 v=-4.049 CR_train=0.645 wall=15.4s
+[12:08:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:08:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=188
+[12:08:53] [INFO] __main__: ep=188 reward=-2319.2 loss=0.0504 v=-4.040 CR_train=0.620 wall=14.8s
+[12:08:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:08:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=189
+[12:09:07] [INFO] __main__: ep=189 reward=-2288.2 loss=0.0497 v=-4.053 CR_train=0.613 wall=14.6s
+[12:09:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:09:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:09:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:09:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:09:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:09:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:09:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:09:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:10:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:10:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:10:18] [INFO] __main__:   EVAL ep=189: val_CR=0.6138 val_WT=5.476 val_DU=0.414
+[12:10:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 106)
+[12:10:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=190
+[12:10:34] [INFO] __main__: ep=190 reward=-2605.0 loss=0.0474 v=-4.063 CR_train=0.630 wall=16.4s
+[12:10:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:10:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=191
+[12:10:48] [INFO] __main__: ep=191 reward=-2209.0 loss=0.0437 v=-4.058 CR_train=0.595 wall=14.1s
+[12:10:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:10:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=192
+[12:11:03] [INFO] __main__: ep=192 reward=-2500.0 loss=0.0514 v=-4.076 CR_train=0.599 wall=15.1s
+[12:11:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:11:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=193
+[12:11:20] [INFO] __main__: ep=193 reward=-2512.0 loss=0.0493 v=-4.071 CR_train=0.640 wall=16.7s
+[12:11:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[12:11:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=194
+[12:11:37] [INFO] __main__: ep=194 reward=-2440.1 loss=0.0625 v=-4.069 CR_train=0.657 wall=16.8s
+[12:11:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:11:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=195
+[12:11:52] [INFO] __main__: ep=195 reward=-2296.9 loss=0.0464 v=-4.042 CR_train=0.602 wall=14.8s
+[12:11:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 111)
+[12:11:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=196
+[12:12:05] [INFO] __main__: ep=196 reward=-2175.8 loss=0.0535 v=-4.042 CR_train=0.578 wall=13.4s
+[12:12:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:12:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=197
+[12:12:21] [INFO] __main__: ep=197 reward=-2333.9 loss=0.0501 v=-4.023 CR_train=0.629 wall=15.5s
+[12:12:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 100)
+[12:12:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=198
+[12:12:35] [INFO] __main__: ep=198 reward=-2272.1 loss=0.0513 v=-4.033 CR_train=0.611 wall=14.3s
+[12:12:35] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:12:35] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=199
+[12:12:50] [INFO] __main__: ep=199 reward=-2438.4 loss=0.0535 v=-4.030 CR_train=0.605 wall=15.5s
+[12:12:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:12:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:13:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:13:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:13:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:13:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:13:31] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:13:31] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:13:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:13:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:13:59] [INFO] __main__:   EVAL ep=199: val_CR=0.6189 val_WT=5.410 val_DU=0.417
+[12:13:59] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep200.pt
+[12:13:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:13:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=200
+[12:14:14] [INFO] __main__: ep=200 reward=-2327.8 loss=0.0515 v=-4.075 CR_train=0.587 wall=14.4s
+[12:14:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:14:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=201
+[12:14:29] [INFO] __main__: ep=201 reward=-2455.7 loss=0.0441 v=-4.056 CR_train=0.625 wall=15.6s
+[12:14:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:14:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=202
+[12:14:45] [INFO] __main__: ep=202 reward=-2478.8 loss=0.0463 v=-4.071 CR_train=0.585 wall=15.2s
+[12:14:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:14:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=203
+[12:14:58] [INFO] __main__: ep=203 reward=-2215.4 loss=0.0425 v=-4.052 CR_train=0.591 wall=13.9s
+[12:14:58] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:14:58] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=204
+[12:15:13] [INFO] __main__: ep=204 reward=-2285.1 loss=0.0460 v=-4.051 CR_train=0.634 wall=14.9s
+[12:15:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:15:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=205
+[12:15:28] [INFO] __main__: ep=205 reward=-2353.6 loss=0.0487 v=-4.045 CR_train=0.599 wall=14.7s
+[12:15:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:15:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=206
+[12:15:44] [INFO] __main__: ep=206 reward=-2549.9 loss=0.0424 v=-4.044 CR_train=0.623 wall=16.0s
+[12:15:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:15:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=207
+[12:16:00] [INFO] __main__: ep=207 reward=-2465.8 loss=0.0447 v=-4.049 CR_train=0.634 wall=15.8s
+[12:16:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:16:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=208
+[12:16:15] [INFO] __main__: ep=208 reward=-2321.5 loss=0.0425 v=-4.038 CR_train=0.629 wall=15.0s
+[12:16:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:16:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=209
+[12:16:30] [INFO] __main__: ep=209 reward=-2318.4 loss=0.0542 v=-4.042 CR_train=0.623 wall=15.0s
+[12:16:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:16:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:16:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:16:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:16:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:16:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:17:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:17:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:17:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:17:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:17:42] [INFO] __main__:   EVAL ep=209: val_CR=0.6196 val_WT=5.477 val_DU=0.420
+[12:17:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[12:17:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=210
+[12:17:57] [INFO] __main__: ep=210 reward=-2380.8 loss=0.0449 v=-4.059 CR_train=0.630 wall=15.4s
+[12:17:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:17:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=211
+[12:18:12] [INFO] __main__: ep=211 reward=-2395.3 loss=0.0484 v=-4.056 CR_train=0.625 wall=15.0s
+[12:18:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[12:18:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=212
+[12:18:27] [INFO] __main__: ep=212 reward=-2306.4 loss=0.0427 v=-4.054 CR_train=0.600 wall=14.4s
+[12:18:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:18:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=213
+[12:18:42] [INFO] __main__: ep=213 reward=-2291.4 loss=0.0493 v=-4.053 CR_train=0.590 wall=15.1s
+[12:18:42] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:18:42] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=214
+[12:18:57] [INFO] __main__: ep=214 reward=-2306.2 loss=0.0479 v=-4.045 CR_train=0.640 wall=15.6s
+[12:18:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:18:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=215
+[12:19:13] [INFO] __main__: ep=215 reward=-2352.7 loss=0.0471 v=-4.070 CR_train=0.650 wall=15.4s
+[12:19:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:19:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=216
+[12:19:28] [INFO] __main__: ep=216 reward=-2456.0 loss=0.0429 v=-4.082 CR_train=0.630 wall=15.6s
+[12:19:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 77)
+[12:19:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=217
+[12:19:45] [INFO] __main__: ep=217 reward=-2589.9 loss=0.0541 v=-4.079 CR_train=0.636 wall=16.5s
+[12:19:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:19:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=218
+[12:20:00] [INFO] __main__: ep=218 reward=-2228.4 loss=0.0440 v=-4.058 CR_train=0.629 wall=15.1s
+[12:20:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 89)
+[12:20:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=219
+[12:20:16] [INFO] __main__: ep=219 reward=-2453.1 loss=0.0446 v=-4.085 CR_train=0.622 wall=16.0s
+[12:20:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:20:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:20:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:20:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:20:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:20:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:21:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:21:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:21:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:21:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:21:29] [INFO] __main__:   EVAL ep=219: val_CR=0.6054 val_WT=5.442 val_DU=0.420
+[12:21:29] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 107)
+[12:21:29] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=220
+[12:21:43] [INFO] __main__: ep=220 reward=-2356.8 loss=0.0552 v=-4.122 CR_train=0.591 wall=14.6s
+[12:21:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:21:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=221
+[12:21:59] [INFO] __main__: ep=221 reward=-2433.6 loss=0.0453 v=-4.118 CR_train=0.623 wall=15.7s
+[12:21:59] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:21:59] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=222
+[12:22:13] [INFO] __main__: ep=222 reward=-2153.4 loss=0.0507 v=-4.105 CR_train=0.606 wall=14.2s
+[12:22:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:22:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=223
+[12:22:28] [INFO] __main__: ep=223 reward=-2303.0 loss=0.0691 v=-4.121 CR_train=0.590 wall=14.8s
+[12:22:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:22:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=224
+[12:22:43] [INFO] __main__: ep=224 reward=-2225.3 loss=0.0482 v=-4.104 CR_train=0.633 wall=14.8s
+[12:22:43] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[12:22:43] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=225
+[12:23:00] [INFO] __main__: ep=225 reward=-2428.8 loss=0.0460 v=-4.117 CR_train=0.639 wall=17.5s
+[12:23:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:23:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=226
+[12:23:19] [INFO] __main__: ep=226 reward=-2568.0 loss=0.0487 v=-4.135 CR_train=0.616 wall=19.0s
+[12:23:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 94)
+[12:23:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=227
+[12:23:36] [INFO] __main__: ep=227 reward=-2339.3 loss=0.0436 v=-4.103 CR_train=0.649 wall=16.3s
+[12:23:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 79)
+[12:23:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=228
+[12:23:53] [INFO] __main__: ep=228 reward=-2402.4 loss=0.0484 v=-4.109 CR_train=0.626 wall=17.7s
+[12:23:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:23:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=229
+[12:24:17] [INFO] __main__: ep=229 reward=-2610.0 loss=0.0451 v=-4.122 CR_train=0.603 wall=24.0s
+[12:24:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:24:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:24:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:24:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:24:57] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:24:57] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:25:13] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:25:13] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:25:28] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:25:28] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:25:44] [INFO] __main__:   EVAL ep=229: val_CR=0.6105 val_WT=5.427 val_DU=0.416
+[12:25:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:25:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=230
+[12:26:00] [INFO] __main__: ep=230 reward=-2295.9 loss=0.0460 v=-4.189 CR_train=0.643 wall=15.6s
+[12:26:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:26:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=231
+[12:26:15] [INFO] __main__: ep=231 reward=-2268.1 loss=0.0527 v=-4.200 CR_train=0.614 wall=15.8s
+[12:26:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:26:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=232
+[12:26:30] [INFO] __main__: ep=232 reward=-2289.0 loss=0.0488 v=-4.202 CR_train=0.615 wall=14.6s
+[12:26:30] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:26:30] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=233
+[12:26:46] [INFO] __main__: ep=233 reward=-2368.7 loss=0.0450 v=-4.190 CR_train=0.631 wall=16.3s
+[12:26:46] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[12:26:46] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=234
+[12:27:01] [INFO] __main__: ep=234 reward=-2165.8 loss=0.0582 v=-4.193 CR_train=0.630 wall=14.3s
+[12:27:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:27:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=235
+[12:27:17] [INFO] __main__: ep=235 reward=-2501.3 loss=0.0545 v=-4.251 CR_train=0.607 wall=16.1s
+[12:27:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 108)
+[12:27:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=236
+[12:27:33] [INFO] __main__: ep=236 reward=-2258.6 loss=0.0436 v=-4.236 CR_train=0.602 wall=16.0s
+[12:27:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:27:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=237
+[12:27:50] [INFO] __main__: ep=237 reward=-2481.3 loss=0.0486 v=-4.238 CR_train=0.642 wall=16.8s
+[12:27:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:27:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=238
+[12:28:17] [INFO] __main__: ep=238 reward=-2466.6 loss=0.0459 v=-4.232 CR_train=0.614 wall=27.2s
+[12:28:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:28:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=239
+[12:28:34] [INFO] __main__: ep=239 reward=-2493.3 loss=0.0460 v=-4.236 CR_train=0.618 wall=17.2s
+[12:28:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:28:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:28:49] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:28:49] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:29:03] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:29:03] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:29:19] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:29:19] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:29:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:29:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:29:53] [INFO] __main__:   EVAL ep=239: val_CR=0.6114 val_WT=5.401 val_DU=0.419
+[12:29:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:29:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=240
+[12:30:23] [INFO] __main__: ep=240 reward=-2397.8 loss=0.0667 v=-4.239 CR_train=0.609 wall=29.5s
+[12:30:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:30:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=241
+[12:30:41] [INFO] __main__: ep=241 reward=-2240.2 loss=0.0888 v=-4.224 CR_train=0.632 wall=17.7s
+[12:30:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:30:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=242
+[12:30:56] [INFO] __main__: ep=242 reward=-2294.7 loss=0.0509 v=-4.249 CR_train=0.606 wall=15.4s
+[12:30:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 103)
+[12:30:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=243
+[12:31:14] [INFO] __main__: ep=243 reward=-2296.2 loss=0.0465 v=-4.221 CR_train=0.625 wall=18.0s
+[12:31:14] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:31:14] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=244
+[12:31:38] [INFO] __main__: ep=244 reward=-2478.7 loss=0.0549 v=-4.239 CR_train=0.619 wall=24.2s
+[12:31:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:31:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=245
+[12:31:54] [INFO] __main__: ep=245 reward=-2426.0 loss=0.0519 v=-4.207 CR_train=0.620 wall=15.9s
+[12:31:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:31:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=246
+[12:32:10] [INFO] __main__: ep=246 reward=-2286.0 loss=0.0439 v=-4.209 CR_train=0.638 wall=16.3s
+[12:32:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:32:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=247
+[12:32:27] [INFO] __main__: ep=247 reward=-2490.3 loss=0.0498 v=-4.220 CR_train=0.618 wall=17.1s
+[12:32:27] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:32:27] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=248
+[12:32:44] [INFO] __main__: ep=248 reward=-2438.0 loss=0.0485 v=-4.208 CR_train=0.635 wall=16.6s
+[12:32:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:32:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=249
+[12:33:04] [INFO] __main__: ep=249 reward=-2119.8 loss=0.0478 v=-4.217 CR_train=0.612 wall=19.5s
+[12:33:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:33:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:33:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:33:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:33:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:33:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:33:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:33:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:34:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:34:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:34:41] [INFO] __main__:   EVAL ep=249: val_CR=0.6199 val_WT=5.367 val_DU=0.419
+[12:34:41] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep250.pt
+[12:34:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:34:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=250
+[12:35:00] [INFO] __main__: ep=250 reward=-2397.9 loss=0.0487 v=-4.186 CR_train=0.627 wall=19.3s
+[12:35:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:35:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=251
+[12:35:17] [INFO] __main__: ep=251 reward=-2329.6 loss=0.0681 v=-4.195 CR_train=0.638 wall=16.9s
+[12:35:17] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:35:17] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=252
+[12:35:33] [INFO] __main__: ep=252 reward=-2395.7 loss=0.0699 v=-4.213 CR_train=0.597 wall=16.0s
+[12:35:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:35:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=253
+[12:35:50] [INFO] __main__: ep=253 reward=-2466.4 loss=0.0527 v=-4.207 CR_train=0.614 wall=16.6s
+[12:35:50] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[12:35:50] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=254
+[12:36:05] [INFO] __main__: ep=254 reward=-2141.5 loss=0.0463 v=-4.188 CR_train=0.630 wall=15.7s
+[12:36:05] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:36:05] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=255
+[12:36:34] [INFO] __main__: ep=255 reward=-2427.9 loss=0.0517 v=-4.300 CR_train=0.620 wall=28.6s
+[12:36:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[12:36:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=256
+[12:36:51] [INFO] __main__: ep=256 reward=-2182.4 loss=0.0920 v=-4.292 CR_train=0.595 wall=17.2s
+[12:36:51] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:36:51] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=257
+[12:37:08] [INFO] __main__: ep=257 reward=-2414.8 loss=0.0493 v=-4.299 CR_train=0.612 wall=17.2s
+[12:37:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 77)
+[12:37:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=258
+[12:37:26] [INFO] __main__: ep=258 reward=-2352.0 loss=0.0625 v=-4.289 CR_train=0.609 wall=17.6s
+[12:37:26] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:37:26] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=259
+[12:37:44] [INFO] __main__: ep=259 reward=-2276.1 loss=0.0544 v=-4.287 CR_train=0.656 wall=18.3s
+[12:37:44] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:37:44] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:38:01] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:38:01] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:38:16] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:38:16] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:38:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:38:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:39:00] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:39:00] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:39:15] [INFO] __main__:   EVAL ep=259: val_CR=0.6181 val_WT=5.402 val_DU=0.413
+[12:39:15] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 102)
+[12:39:15] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=260
+[12:39:33] [INFO] __main__: ep=260 reward=-2382.4 loss=0.0425 v=-4.312 CR_train=0.637 wall=18.4s
+[12:39:33] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 78)
+[12:39:33] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=261
+[12:39:52] [INFO] __main__: ep=261 reward=-2516.9 loss=0.0546 v=-4.334 CR_train=0.629 wall=19.1s
+[12:39:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:39:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=262
+[12:40:08] [INFO] __main__: ep=262 reward=-2484.9 loss=0.0497 v=-4.332 CR_train=0.638 wall=16.0s
+[12:40:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:40:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=263
+[12:40:24] [INFO] __main__: ep=263 reward=-2357.4 loss=0.0500 v=-4.317 CR_train=0.599 wall=15.4s
+[12:40:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:40:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=264
+[12:40:38] [INFO] __main__: ep=264 reward=-2387.7 loss=0.0643 v=-4.335 CR_train=0.565 wall=14.7s
+[12:40:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:40:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=265
+[12:40:54] [INFO] __main__: ep=265 reward=-2455.6 loss=0.0488 v=-4.410 CR_train=0.665 wall=16.0s
+[12:40:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:40:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=266
+[12:41:10] [INFO] __main__: ep=266 reward=-2448.0 loss=0.0476 v=-4.418 CR_train=0.600 wall=15.5s
+[12:41:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:41:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=267
+[12:41:25] [INFO] __main__: ep=267 reward=-2411.9 loss=0.0551 v=-4.417 CR_train=0.611 wall=15.5s
+[12:41:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 83)
+[12:41:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=268
+[12:41:41] [INFO] __main__: ep=268 reward=-2326.6 loss=0.0456 v=-4.425 CR_train=0.664 wall=15.6s
+[12:41:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:41:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=269
+[12:41:56] [INFO] __main__: ep=269 reward=-2282.5 loss=0.0443 v=-4.427 CR_train=0.625 wall=15.3s
+[12:41:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:41:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:42:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:42:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:42:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:42:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:42:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:42:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:42:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:42:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:43:12] [INFO] __main__:   EVAL ep=269: val_CR=0.6150 val_WT=5.470 val_DU=0.425
+[12:43:12] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:43:12] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=270
+[12:43:45] [INFO] __main__: ep=270 reward=-2457.9 loss=0.0500 v=-4.379 CR_train=0.646 wall=32.8s
+[12:43:45] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:43:45] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=271
+[12:44:03] [INFO] __main__: ep=271 reward=-2344.6 loss=0.0415 v=-4.384 CR_train=0.624 wall=18.2s
+[12:44:04] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:44:04] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=272
+[12:44:18] [INFO] __main__: ep=272 reward=-2275.6 loss=0.0494 v=-4.407 CR_train=0.621 wall=14.7s
+[12:44:18] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:44:18] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=273
+[12:44:34] [INFO] __main__: ep=273 reward=-2464.5 loss=0.0554 v=-4.402 CR_train=0.617 wall=15.3s
+[12:44:34] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:44:34] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=274
+[12:44:48] [INFO] __main__: ep=274 reward=-2251.1 loss=0.0556 v=-4.393 CR_train=0.602 wall=14.4s
+[12:44:48] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:44:48] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=275
+[12:45:02] [INFO] __main__: ep=275 reward=-2255.9 loss=0.0583 v=-4.422 CR_train=0.600 wall=14.5s
+[12:45:02] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 90)
+[12:45:02] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=276
+[12:45:20] [INFO] __main__: ep=276 reward=-2371.5 loss=0.0486 v=-4.421 CR_train=0.628 wall=17.1s
+[12:45:20] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:45:20] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=277
+[12:45:36] [INFO] __main__: ep=277 reward=-2405.1 loss=0.0508 v=-4.436 CR_train=0.610 wall=16.4s
+[12:45:36] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 97)
+[12:45:36] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=278
+[12:45:52] [INFO] __main__: ep=278 reward=-2374.8 loss=0.0489 v=-4.408 CR_train=0.649 wall=16.3s
+[12:45:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 87)
+[12:45:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=279
+[12:46:08] [INFO] __main__: ep=279 reward=-2379.0 loss=0.0429 v=-4.434 CR_train=0.653 wall=15.8s
+[12:46:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:46:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:46:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:46:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:46:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:46:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:46:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:46:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:47:07] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:47:07] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:47:23] [INFO] __main__:   EVAL ep=279: val_CR=0.6110 val_WT=5.487 val_DU=0.424
+[12:47:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 93)
+[12:47:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=280
+[12:47:39] [INFO] __main__: ep=280 reward=-2354.5 loss=0.0486 v=-4.387 CR_train=0.607 wall=15.9s
+[12:47:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 81)
+[12:47:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=281
+[12:47:55] [INFO] __main__: ep=281 reward=-2449.8 loss=0.0432 v=-4.408 CR_train=0.616 wall=16.0s
+[12:47:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 85)
+[12:47:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=282
+[12:48:10] [INFO] __main__: ep=282 reward=-2325.6 loss=0.0459 v=-4.403 CR_train=0.616 wall=15.1s
+[12:48:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:48:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=283
+[12:48:25] [INFO] __main__: ep=283 reward=-2259.8 loss=0.0586 v=-4.398 CR_train=0.603 wall=14.5s
+[12:48:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 116)
+[12:48:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=284
+[12:48:40] [INFO] __main__: ep=284 reward=-2426.9 loss=0.0578 v=-4.401 CR_train=0.600 wall=15.3s
+[12:48:40] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:48:40] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=285
+[12:48:55] [INFO] __main__: ep=285 reward=-2418.5 loss=0.0494 v=-4.422 CR_train=0.613 wall=15.4s
+[12:48:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:48:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=286
+[12:49:10] [INFO] __main__: ep=286 reward=-2310.4 loss=0.0475 v=-4.410 CR_train=0.636 wall=15.0s
+[12:49:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:49:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=287
+[12:49:25] [INFO] __main__: ep=287 reward=-2465.3 loss=0.0513 v=-4.428 CR_train=0.590 wall=15.3s
+[12:49:25] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 92)
+[12:49:25] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=288
+[12:49:41] [INFO] __main__: ep=288 reward=-2447.8 loss=0.0549 v=-4.424 CR_train=0.590 wall=15.1s
+[12:49:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:49:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=289
+[12:49:56] [INFO] __main__: ep=289 reward=-2370.2 loss=0.0538 v=-4.417 CR_train=0.584 wall=15.1s
+[12:49:56] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:49:56] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:50:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:50:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:50:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:50:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:50:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:50:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:50:52] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:50:52] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:51:06] [INFO] __main__:   EVAL ep=289: val_CR=0.6089 val_WT=5.489 val_DU=0.424
+[12:51:06] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 95)
+[12:51:06] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=290
+[12:51:21] [INFO] __main__: ep=290 reward=-2336.0 loss=0.0610 v=-4.478 CR_train=0.608 wall=14.5s
+[12:51:21] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 84)
+[12:51:21] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=291
+[12:51:37] [INFO] __main__: ep=291 reward=-2474.3 loss=0.0482 v=-4.467 CR_train=0.647 wall=16.1s
+[12:51:37] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:51:37] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=292
+[12:51:53] [INFO] __main__: ep=292 reward=-2488.6 loss=0.0448 v=-4.438 CR_train=0.609 wall=16.1s
+[12:51:53] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 86)
+[12:51:53] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=293
+[12:52:08] [INFO] __main__: ep=293 reward=-2252.8 loss=0.0437 v=-4.455 CR_train=0.668 wall=15.2s
+[12:52:08] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 80)
+[12:52:08] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=294
+[12:52:23] [INFO] __main__: ep=294 reward=-2405.7 loss=0.0603 v=-4.469 CR_train=0.609 wall=14.9s
+[12:52:23] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:52:23] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=295
+[12:52:39] [INFO] __main__: ep=295 reward=-2307.3 loss=0.0720 v=-4.473 CR_train=0.620 wall=16.1s
+[12:52:39] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:52:39] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=296
+[12:52:55] [INFO] __main__: ep=296 reward=-2570.8 loss=0.0568 v=-4.493 CR_train=0.584 wall=15.9s
+[12:52:55] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:52:55] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=297
+[12:53:10] [INFO] __main__: ep=297 reward=-2280.7 loss=0.0569 v=-4.485 CR_train=0.589 wall=14.5s
+[12:53:10] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 91)
+[12:53:10] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=298
+[12:53:24] [INFO] __main__: ep=298 reward=-2256.3 loss=0.0539 v=-4.493 CR_train=0.599 wall=14.3s
+[12:53:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 88)
+[12:53:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=299
+[12:53:41] [INFO] __main__: ep=299 reward=-2541.3 loss=0.0456 v=-4.487 CR_train=0.612 wall=16.7s
+[12:53:41] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 96)
+[12:53:41] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10000
+[12:53:54] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 104)
+[12:53:54] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10001
+[12:54:09] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 105)
+[12:54:09] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10002
+[12:54:24] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 99)
+[12:54:24] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10003
+[12:54:38] [INFO] src.abm.model: created 275 drivers (n_online at hour 0: 98)
+[12:54:38] [INFO] src.abm.model: RideHailingModel initialized: n_zones=14, n_drivers=275, step=2min, horizon=720, seed=10004
+[12:54:52] [INFO] __main__:   EVAL ep=299: val_CR=0.6128 val_WT=5.440 val_DU=0.423
+[12:54:52] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_ep300.pt
+[12:54:52] [INFO] src.dqn.td_trainer: Checkpoint saved: experiments/models/v_final.pt
+[12:54:52] [INFO] __main__: === Training complete. Best val_CR: 0.6217 ===
