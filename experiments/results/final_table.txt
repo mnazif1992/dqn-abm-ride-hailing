@@ -1,0 +1,17 @@
+======================================================================
+Final Results Table (Patched Env, 10 validation seeds)
+======================================================================
+
+Method                       Mean CR      Std      Min      Max
+----------------------------------------------------------------------
+Greedy                        0.6099   0.0161   0.5846   0.6394
+DQN_v5_ep150                  0.6128   0.0214   0.5757   0.6428
+V_net_ep109                   0.6259   0.0163   0.5976   0.6598
+
+Calibration target CR: 0.615
+Hungarian-resolve (ABM-direct ref): 0.624
+
+Wilcoxon (one-sided, paired, n=10):
+  DQN v5 vs Greedy : p=0.4229  -> NOT significant
+  V-net  vs Greedy : p=0.0186  -> SIGNIFICANT (V-net > Greedy)
+  V-net  vs DQN v5 : p=0.0244  -> SIGNIFICANT (V-net > DQN v5)

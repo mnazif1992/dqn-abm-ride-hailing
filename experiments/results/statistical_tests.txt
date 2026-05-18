@@ -1,0 +1,76 @@
+======================================================================
+Statistical Comparison on Patched Env (10 seeds)
+======================================================================
+
+--- Greedy baseline ---
+  seed 10000: CR=0.6230
+  seed 10001: CR=0.5919
+  seed 10002: CR=0.5934
+  seed 10003: CR=0.5846
+  seed 10004: CR=0.6074
+  seed 10005: CR=0.6235
+  seed 10006: CR=0.6185
+  seed 10007: CR=0.6141
+  seed 10008: CR=0.6035
+  seed 10009: CR=0.6394
+  mean: 0.6099 +/- 0.0161
+
+--- DQN v5 (ep150 checkpoint, CR-near-best) ---
+  seed 10000: CR=0.6205
+  seed 10001: CR=0.6354
+  seed 10002: CR=0.5757
+  seed 10003: CR=0.6208
+  seed 10004: CR=0.6308
+  seed 10005: CR=0.6428
+  seed 10006: CR=0.5900
+  seed 10007: CR=0.5876
+  seed 10008: CR=0.6219
+  seed 10009: CR=0.6023
+  mean: 0.6128 +/- 0.0214
+
+--- V-net (v_best.pt, ep109) ---
+  seed 10000: CR=0.6288
+  seed 10001: CR=0.6332
+  seed 10002: CR=0.6067
+  seed 10003: CR=0.6308
+  seed 10004: CR=0.6181
+  seed 10005: CR=0.6598
+  seed 10006: CR=0.6216
+  seed 10007: CR=0.5976
+  seed 10008: CR=0.6234
+  seed 10009: CR=0.6387
+  mean: 0.6259 +/- 0.0163
+
+======================================================================
+Wilcoxon Signed-Rank Tests (paired, per-seed)
+======================================================================
+
+DQN v5 vs Greedy:
+  mean diff: +0.0028
+  median diff: +0.0079
+  std diff: 0.0275
+  Wilcoxon (one-sided greater): stat=30.00, p-value=0.4229
+  X Not statistically significant (p >= 0.05)
+
+V-net vs Greedy:
+  mean diff: +0.0159
+  median diff: +0.0120
+  std diff: 0.0190
+  Wilcoxon (one-sided greater): stat=48.00, p-value=0.0186
+  OK V-net > Greedy (p < 0.05)
+
+DQN v5 vs V-net:
+  mean diff: -0.0131
+  median diff: -0.0100
+  std diff: 0.0151
+  Wilcoxon (one-sided greater): stat=8.00, p-value=0.9814
+  X Not statistically significant (p >= 0.05)
+
+V-net vs DQN v5:
+  mean diff: +0.0131
+  median diff: +0.0100
+  std diff: 0.0151
+  Wilcoxon (one-sided greater): stat=47.00, p-value=0.0244
+  OK V-net > DQN v5 (p < 0.05)
+
+Saved: experiments/results/final_comparison.csv
