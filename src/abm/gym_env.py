@@ -100,6 +100,7 @@ class RideHailingEnv(gym.Env):
         render_mode: Optional[str] = None,
         reward_mode: Optional[str] = None,
         replay_buffer: Optional[Any] = None,
+        apply_calibration_overrides: bool = True,
     ) -> None:
         super().__init__()
 
@@ -108,6 +109,9 @@ class RideHailingEnv(gym.Env):
         self._zones_data = dict(zones_data)
         self._base_seed = seed
         self.render_mode = render_mode
+        self._apply_cal_overrides = bool(apply_calibration_overrides)
+        # context manager فعالِ abm_param_overrides (None تا reset)
+        self._cal_ctx = None
 
         # محاسبه‌گر پاداش (mode از پارامتر یا config.reward.mode؛ پیش‌فرض shaped)
         from src.abm.reward import RewardCalculator
@@ -196,6 +200,66 @@ class RideHailingEnv(gym.Env):
         if self._orig_dispatch_step is not None:
             dispatcher_agent.DispatcherAgent.dispatch_step = self._orig_dispatch_step
             self._orig_dispatch_step = None
+
+    def _behavioral_cal_overrides(self) -> Dict[str, Any]:
+        """
+        استخراج پارامترهای رفتاریِ calibration.overrides که در ABM-direct
+        از طریق abm_param_overrides اعمال می‌شوند.
+
+        n_drivers و search_radius_km اینجا نیستند — آن‌ها top-level config
+        هستند و خودِ RideHailingModel(config) اعمالشان می‌کند.
+        """
+        cal = dict(self._config.get("calibration", {}))
+        ov = dict(cal.get("overrides", {}))
+        kw: Dict[str, Any] = {}
+        if "p_cancel_per_step" in ov:
+            kw["p_cancel_per_step"] = float(ov["p_cancel_per_step"])
+        # patience_scale نام مستعار patience_gamma_scale است
+        if "patience_scale" in ov:
+            kw["patience_gamma_scale"] = float(ov["patience_scale"])
+        if "patience_gamma_scale" in ov:
+            kw["patience_gamma_scale"] = float(ov["patience_gamma_scale"])
+        if "acceptance_beta_a" in ov:
+            kw["acceptance_beta_a"] = float(ov["acceptance_beta_a"])
+        if "acceptance_beta_b" in ov:
+            kw["acceptance_beta_b"] = float(ov["acceptance_beta_b"])
+        if "no_driver_threshold_steps" in ov:
+            kw["no_driver_threshold_steps"] = int(
+                ov["no_driver_threshold_steps"]
+            )
+        return kw
+
+    def _enter_cal_overrides(self) -> None:
+        """
+        ورود به abm_param_overrides (یک‌بار، پایدار تا close).
+
+        ترتیب کلیدی: این پس از _patch_dispatch فراخوانی می‌شود تا
+        wrapperِ no_driver دورِ _noop_dispatch_step پیچیده شود (نه
+        dispatch واقعی) — env همچنان خودش تخصیص می‌دهد، اما منطق
+        no_driver-marking در model.step() فعال می‌شود. سایر patchها
+        (p_cancel/patience/acceptance) پیش از _build_model اعمال می‌شوند
+        تا agentها با پارامترهای کالیبره ساخته شوند.
+        """
+        if self._cal_ctx is not None or not self._apply_cal_overrides:
+            return
+        kw = self._behavioral_cal_overrides()
+        if not kw:
+            return
+        from src.calibration.multi_seed_runner import abm_param_overrides
+
+        self._cal_ctx = abm_param_overrides(**kw)
+        self._cal_ctx.__enter__()
+        logger.info(
+            "gym_env: applied calibration overrides %s", kw
+        )
+
+    def _exit_cal_overrides(self) -> None:
+        """خروج از abm_param_overrides و بازگرداندن global state."""
+        if self._cal_ctx is not None:
+            try:
+                self._cal_ctx.__exit__(None, None, None)
+            finally:
+                self._cal_ctx = None
 
     def _build_model(self, seed: int) -> None:
         """ساخت یک نمونه تازه RideHailingModel با seed مشخص."""
@@ -581,7 +645,16 @@ class RideHailingEnv(gym.Env):
             else (int(self._base_seed) if self._base_seed is not None else 42)
         )
 
-        self._patch_dispatch()
+        # patchها global/پایدارند: فقط در اولین reset نصب می‌شوند.
+        # ترتیب: _patch_dispatch (dispatch=_noop) سپس _enter_cal_overrides
+        # (wrapperِ no_driver دورِ _noop + patchهای p_cancel/patience/
+        # acceptance) — تا agentهای model بعدی با پارامترهای کالیبره ساخته
+        # شوند و no_driver-marking فعال باشد. در resetهای بعدی patchها
+        # دست‌نخورده می‌مانند (وگرنه wrapper بازنویسی می‌شد).
+        if self._cal_ctx is None:
+            self._patch_dispatch()
+            self._enter_cal_overrides()
+
         self._build_model(episode_seed)
         self._episode_reward = 0.0
         self._terminated = False
@@ -772,6 +845,10 @@ class RideHailingEnv(gym.Env):
 
     def close(self) -> None:
         """آزادسازی منابع و بازگرداندن dispatch_step اصلی ABM."""
+        # ابتدا abm_param_overrides خارج می‌شود (global state بازمی‌گردد:
+        # P_CANCEL_PER_STEP, sample_*, و dispatch_step به _noop ذخیره‌شده)
+        # سپس _unpatch_dispatch، dispatch_step اصلی ABM را برمی‌گرداند.
+        self._exit_cal_overrides()
         self._unpatch_dispatch()
         self._model = None
         self._dispatcher = None
