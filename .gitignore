@@ -38,3 +38,5 @@ mlflow.db
 
 # Notebooks output (اختیاری)
 # notebooks/*.ipynb
+*.pt
+*.npz
